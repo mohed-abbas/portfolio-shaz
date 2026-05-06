@@ -19,7 +19,7 @@ export default function DevOpsCard() {
           <p className="text-xs uppercase tracking-widest text-ink-400 font-mono">
             Cloud &amp; DevOps
           </p>
-          <p className="font-medium text-ink-900">All systems</p>
+          <p className="font-medium text-ink-900">Owned, not outsourced</p>
         </div>
       </div>
 

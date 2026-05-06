@@ -51,11 +51,11 @@ export default function GithubCard() {
 
       <div className="mt-6 grid grid-cols-3 gap-3 pt-5 border-t border-ink-900/[0.06]">
         <div>
-          <p className="font-serif text-3xl text-ink-900">40+</p>
+          <p className="text-3xl text-ink-900">40+</p>
           <p className="text-xs text-ink-500 font-mono mt-1">Repos</p>
         </div>
         <div>
-          <p className="font-serif text-3xl text-ink-900">5y</p>
+          <p className="text-3xl text-ink-900">5y</p>
           <p className="text-xs text-ink-500 font-mono mt-1">Active</p>
         </div>
         <div>

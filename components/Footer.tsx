@@ -7,16 +7,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
-            <p className="font-serif italic text-4xl text-ink-900 leading-tight">
+            <p className="text-4xl text-ink-900 leading-tight">
               Let&apos;s build something <br />
-              <span className="text-accent-500">dependable.</span>
+              <span className="font-serif italic text-accent-500">that stays up.</span>
             </p>
             <p className="mt-4 text-ink-500 max-w-md">
-              Available for full-stack engineering roles, DevOps consulting, and
-              long-term remote contracts.
+              Open to senior product-engineering roles and long-term remote
+              contracts. Replies within 24 hours, in your timezone.
             </p>
             <a
-              href="mailto:mmunibrehman@gmail.com"
+              href="mailto:mmunibrehman@gmail.com?subject=Project%20inquiry"
               className="mt-6 inline-flex items-center gap-2 text-ink-900 font-medium border-b-2 border-ink-900 pb-1 hover:gap-3 transition-all"
             >
               mmunibrehman@gmail.com
@@ -87,12 +87,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-ink-900/[0.06] flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-ink-500">
+        <div className="mt-16 pt-8 border-t border-ink-900/[0.06] text-sm text-ink-500">
           <p>© {new Date().getFullYear()} Muhammad Muneeb Ur Rehman. All rights reserved.</p>
-          <p className="font-mono text-xs">
-            Built with Next.js · Designed in Pakistan{" "}
-            <span className="text-accent-500">●</span> PKT (UTC+5)
-          </p>
         </div>
       </div>
     </footer>

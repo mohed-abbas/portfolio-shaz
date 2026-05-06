@@ -8,15 +8,15 @@ export default function QuoteCard() {
 
       <div className="relative">
         <p className="text-xs uppercase tracking-widest text-cream-100/40 font-mono">
-          Building philosophy
+          How I think about software
         </p>
 
-        <p className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight text-balance">
-          Software that&apos;s easy to{" "}
-          <span className="italic text-accent-400">deploy</span>, easy to{" "}
-          <span className="italic text-accent-400">maintain</span>, and{" "}
-          <span className="italic text-accent-400">dependable</span> in
-          production.
+        <p className="mt-6 text-3xl sm:text-4xl lg:text-5xl leading-tight text-balance">
+          Easy to{" "}
+          <span className="font-serif italic text-accent-400">deploy</span>, easy to{" "}
+          <span className="font-serif italic text-accent-400">maintain</span>, and{" "}
+          <span className="font-serif italic text-accent-400">dependable</span> when
+          real users show up.
         </p>
 
         <div className="mt-8 flex items-center gap-4">

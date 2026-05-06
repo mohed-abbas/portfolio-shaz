@@ -8,10 +8,10 @@ const experiences = [
     location: "On-site · Pakistan",
     type: "Full-time",
     bullets: [
-      "Built FCCMS (Fauji Cement Colony Management System) end-to-end as sole developer — a housing society platform covering resident records, repair & maintenance, inventory, and complaint workflows.",
-      "Owned schema, REST APIs, frontend, and deployment using Laravel, Next.js, and TypeScript.",
-      "Wrote Python automation tools to fast-track daily IT tasks, including a network scanner and a remote installer for endpoint software deployment.",
-      "Supported IT operations across EMS, ERP, networking, and hardware troubleshooting.",
+      "Designed, built, and shipped FCCMS (Fauji Cement Colony Management System) solo — a housing-society platform now live and used daily for resident records, maintenance workflows, inventory, and complaint tracking.",
+      "Owned the full delivery chain: PostgreSQL schema, Laravel REST APIs, Next.js + TypeScript frontend, AWS deployment, and CI/CD.",
+      "Cut hours from daily IT operations with Python automation — a network scanner and a remote installer that rolls out endpoint software across the corporate network.",
+      "Acted as a force-multiplier for the IT function across EMS, ERP, networking, and on-site hardware support.",
     ],
     stack: ["Laravel", "Next.js", "TypeScript", "Python", "PostgreSQL"],
     current: true,
@@ -23,23 +23,23 @@ const experiences = [
     location: "Hybrid",
     type: "Full-time",
     bullets: [
-      "Architected and developed full-stack web applications across the SDLC — relational database schemas, Laravel and Django REST APIs, responsive React/Next.js frontends.",
-      "Delivered production features through Git-based version control, peer code review, and agile sprint cycles.",
-      "Applied object-oriented design, performance optimization, and CI/CD practices in collaboration with cross-functional teams.",
+      "Shipped multiple full-stack web products across the SDLC — relational schemas, Laravel and Django REST APIs, and React/Next.js frontends — for paying customers.",
+      "Worked inside an agile team: Git-based reviews, sprint planning, and a strong feedback culture that kept release velocity high without breaking trunk.",
+      "Tightened performance, hardened deploys, and matured CI/CD pipelines alongside product, design, and QA stakeholders.",
     ],
     stack: ["Laravel", "Django", "React", "Next.js", "MySQL", "PostgreSQL"],
   },
   {
     company: "Freelance · Devlin Solutions",
-    role: "Full-Stack & DevOps Engineer",
+    role: "Product Engineer",
     period: "Jan 2021 — Present",
     location: "Remote · Worldwide",
     type: "Independent",
     bullets: [
-      "Engineered and shipped end-to-end full-stack web applications for international and local clients via Upwork, Fiverr, and direct engagements.",
-      "Built React/Next.js frontends with TypeScript, REST APIs in Laravel and Django, plus database design, cloud deployment, and post-launch maintenance.",
-      "Delivered task-based customization, feature development, and bug fixes — including contract engagements with Panther Tech.",
-      "Shipped production-ready AI integrations across client web applications using OpenAI, Anthropic Claude, and Google Gemini APIs.",
+      "Delivered end-to-end web products for international and local clients via Upwork, Fiverr, and direct engagements — a track record of repeat hires and long retention.",
+      "Built typed Next.js/React frontends, Laravel and Django APIs, schema design, cloud deployment, and the ongoing maintenance work that keeps the bills paid post-launch.",
+      "Executed scoped contract engagements (incl. with Panther Tech) — feature builds, targeted refactors, and bug fixes shipped on tight timelines.",
+      "Embedded production-grade AI into client products with OpenAI, Anthropic Claude, and Google Gemini — measurable workflow features, not chatbot demos.",
     ],
     stack: ["Next.js", "Laravel", "Django", "AWS", "OpenAI", "Claude"],
     accent: true,
@@ -51,9 +51,9 @@ const experiences = [
     location: "On-site",
     type: "Full-time",
     bullets: [
-      "Started as a PHP intern and promoted to Software Engineer within the first month based on rapid skill acquisition.",
-      "Engineered and maintained Laravel applications backed by MySQL.",
-      "Built dynamic, real-time interfaces with Laravel Livewire and AJAX-driven workflows.",
+      "Joined as a PHP intern and promoted to Software Engineer inside the first month — picked up the codebase and started shipping features alongside seniors.",
+      "Built and maintained Laravel applications on MySQL — owned features from ticket to release.",
+      "Shipped real-time interfaces with Laravel Livewire and AJAX, including dashboards and operations tools used daily by internal teams.",
     ],
     stack: ["Laravel", "Livewire", "MySQL", "AJAX"],
   },
@@ -69,7 +69,7 @@ const education = [
     school: "Amal Academy (Stanford-funded)",
     degree: "Career-Prep Fellow",
     period: "Dec 2021 — Feb 2022",
-    note: "Selected from 4,500+ applicants for a 150-hour program in communication, leadership, and problem-solving.",
+    note: "Selected from 4,500+ applicants for a 150-hour Stanford-funded program in communication, leadership, and structured problem-solving.",
   },
 ];
 
@@ -81,13 +81,15 @@ export default function ExperiencePage() {
         <p className="text-xs font-mono uppercase tracking-widest text-ink-400 mb-4">
           / Experience · 5+ years
         </p>
-        <h1 className="font-serif text-display-md text-ink-900 max-w-3xl text-balance">
-          From PHP intern to{" "}
-          <span className="italic text-accent-600">end-to-end ownership</span>.
+        <h1 className="text-display-md text-ink-900 max-w-3xl text-balance">
+          PHP intern to{" "}
+          <span className="font-serif italic text-accent-600">end-to-end owner</span> —
+          on the same trajectory ever since.
         </h1>
         <p className="mt-5 text-lg text-ink-500 max-w-2xl">
-          A career built on shipping production software, learning fast, and
-          owning projects from schema to deployment.
+          Five years of production engineering across enterprise systems,
+          SaaS, and freelance work — promoted on output, retained on
+          reliability, and still shipping every week.
         </p>
       </div>
 
@@ -131,7 +133,7 @@ export default function ExperiencePage() {
                     <p className="text-xs font-mono uppercase tracking-widest text-ink-400">
                       {exp.type}
                     </p>
-                    <h2 className="mt-1 font-serif text-2xl sm:text-3xl text-ink-900">
+                    <h2 className="mt-1 text-2xl sm:text-3xl text-ink-900">
                       {exp.role}
                     </h2>
                     <p className="mt-1 text-ink-600 font-medium">
@@ -182,7 +184,7 @@ export default function ExperiencePage() {
             <p className="text-xs font-mono uppercase tracking-widest text-ink-400">
               Credentials
             </p>
-            <h2 className="font-serif text-3xl text-ink-900 italic">
+            <h2 className="text-3xl text-ink-900">
               Education
             </h2>
           </div>
@@ -202,7 +204,7 @@ export default function ExperiencePage() {
                   <p className="font-mono text-xs text-ink-400 uppercase tracking-widest">
                     {ed.period}
                   </p>
-                  <h3 className="mt-1 font-serif text-xl text-ink-900">
+                  <h3 className="mt-1 text-xl text-ink-900">
                     {ed.school}
                   </h3>
                   <p className="mt-1 text-ink-600">{ed.degree}</p>

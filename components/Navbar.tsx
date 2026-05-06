@@ -1,15 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
-  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
@@ -24,8 +25,15 @@ export default function Navbar() {
           className="flex items-center gap-2.5 group"
           onClick={() => setOpen(false)}
         >
-          <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-ink-900 text-cream-100">
-            <span className="font-serif italic text-lg">m.</span>
+          <span className="relative inline-block w-9 h-9">
+            <Image
+              src="/muneeb-photo.jpg"
+              alt="Muneeb Ur Rehman"
+              width={72}
+              height={72}
+              priority
+              className="w-9 h-9 rounded-full object-cover ring-1 ring-ink-900/10"
+            />
             <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-accent-500 ring-2 ring-cream-100 animate-shimmer" />
           </span>
           <span className="font-medium text-ink-900 tracking-tight">

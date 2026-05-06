@@ -33,12 +33,11 @@ export default function AvatarCard() {
             <span className="text-cream-100/60">cat role.txt</span>
           </p>
           <p className="text-cream-100 leading-relaxed">
-            Full-Stack &amp;<br />
-            DevOps Engineer
+            Product Engineer · Ships end-to-end
           </p>
           <p className="mt-4">
             <span className="text-accent-400">$</span>{" "}
-            <span className="text-cream-100/60">ls focus/</span>
+            <span className="text-cream-100/60">ls daily-stack/</span>
           </p>
           <p className="text-cream-100/80">
             laravel · next.js · aws<br />
