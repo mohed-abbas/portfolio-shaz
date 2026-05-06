@@ -1,4 +1,4 @@
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, MapPin } from "lucide-react";
 import Link from "next/link";
 
 export default function HeroCard() {
@@ -39,6 +39,14 @@ export default function HeroCard() {
           >
             See selected work
           </Link>
+          <a
+            href="/Muhammad_Muneeb_Resume.docx"
+            download
+            className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-ink-900/10 text-ink-900 hover:border-ink-900/30 transition-colors"
+          >
+            <Download size={16} className="group-hover:translate-y-0.5 transition-transform" />
+            Download resume
+          </a>
         </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-ink-500">

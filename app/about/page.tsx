@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code, Database, Cloud, Brain, Building2 } from "lucide-react";
+import { ArrowUpRight, Code, Database, Cloud, Brain, Building2, Download } from "lucide-react";
 import Image from "next/image";
 
 const skillGroups = [
@@ -208,6 +208,24 @@ export default function AboutPage() {
                 <ArrowUpRight size={18} />
               </span>
             </div>
+          </a>
+
+          <a
+            href="/Muhammad_Muneeb_Resume.docx"
+            download
+            className="group flex items-center justify-between gap-4 rounded-3xl bg-white border border-ink-900/[0.06] p-6 card-hover"
+          >
+            <div>
+              <p className="font-mono text-xs uppercase tracking-widest text-ink-400 mb-1">
+                Prefer the one-pager?
+              </p>
+              <p className="text-base text-ink-900 font-medium">
+                Download my resume
+              </p>
+            </div>
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-ink-900 text-cream-100 group-hover:bg-accent-500 transition-colors flex-shrink-0">
+              <Download size={18} />
+            </span>
           </a>
         </aside>
       </section>
