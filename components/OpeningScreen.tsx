@@ -63,11 +63,18 @@ function DotLetter({
   );
 }
 
+let hasPlayed = false;
+
 export default function OpeningScreen() {
   const rootRef = useRef<HTMLDivElement | null>(null);
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(hasPlayed);
 
   useEffect(() => {
+    if (hasPlayed) {
+      setHidden(true);
+      return;
+    }
+
     const root = rootRef.current;
     if (!root) return;
 
@@ -75,13 +82,17 @@ export default function OpeningScreen() {
     const ctx = gsap.context(() => {
       if (reduceMotion) {
         gsap.set(root, { autoAlpha: 0 });
+        hasPlayed = true;
         setHidden(true);
         return;
       }
 
       const timeline = gsap.timeline({
         defaults: { ease: "power3.out" },
-        onComplete: () => setHidden(true),
+        onComplete: () => {
+          hasPlayed = true;
+          setHidden(true);
+        },
       });
       const cursor = root.querySelector<HTMLElement>(".intro-cursor");
       const dots = gsap.utils
