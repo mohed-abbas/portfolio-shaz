@@ -3,6 +3,17 @@ import ProjectsBarrel from "@/components/ProjectsBarrel";
 
 const projects = [
   {
+    name: "VPMS",
+    subtitle: "Multi-tenant SaaS for video production agencies",
+    description:
+      "Full-stack platform replacing the Asana + Frame.io + Slack patchwork creative studios stitch together. 60+ API endpoints, 25+ pages, real-time WebSocket notifications, token-auth client portal, Stripe billing, white-labeling, and the production deploy pipeline — owned end-to-end. Live at vpms.sovstac.com.",
+    tags: ["Django", "Next.js", "PostgreSQL", "Redis", "Stripe", "WebSockets"],
+    role: "Sole Engineer",
+    year: "2025 → Live",
+    status: "in production",
+    gradient: "from-accent-600 to-ink-800",
+  },
+  {
     name: "FCCMS",
     subtitle: "Housing-society platform shipped solo",
     description:
