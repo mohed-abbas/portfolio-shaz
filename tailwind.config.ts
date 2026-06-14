@@ -61,6 +61,7 @@ const config: Config = {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "shimmer": "shimmer 3s ease-in-out infinite",
         "blink": "blink 1.2s ease-in-out infinite",
+        "blink-hard": "blink-hard 1s steps(1) infinite",
       },
       keyframes: {
         marquee: {
@@ -86,6 +87,10 @@ const config: Config = {
         blink: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.2" },
+        },
+        "blink-hard": {
+          "0%, 49%": { opacity: "1" },
+          "50%, 100%": { opacity: "0" },
         },
       },
       backgroundImage: {

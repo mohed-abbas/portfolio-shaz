@@ -9,7 +9,7 @@ A premium, light-themed Next.js portfolio for Muhammad Shahzaib, Full-Stack Deve
 - **Tailwind CSS** (custom palette + animations)
 - **Ubuntu** (sans + mono) and **Handlee** via `next/font/google`
 - **Lucide React** icons
-- **GSAP** — opening-screen intro animation (loaded dynamically, code-split out of the initial bundle)
+- **Pen-trace intro** — a from-scratch React intro that traces "SHAHZAIB." across a coordinate grid, then fades to the site (no animation library)
 
 ## 🚀 Getting Started
 

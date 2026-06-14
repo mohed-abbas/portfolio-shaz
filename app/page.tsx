@@ -6,12 +6,12 @@ import FeaturedCard from "@/components/cards/FeaturedCard";
 import AICard from "@/components/cards/AICard";
 import DevOpsCard from "@/components/cards/DevOpsCard";
 import QuoteCard from "@/components/cards/QuoteCard";
-import OpeningScreen from "@/components/OpeningScreen";
+import IntroScreen from "@/components/IntroScreen";
 
 export default function HomePage() {
   return (
     <>
-      <OpeningScreen />
+      <IntroScreen />
       <div
         id="portfolio-grid"
         className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-8 sm:py-10"
