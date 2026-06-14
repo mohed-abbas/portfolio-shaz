@@ -1,5 +1,8 @@
 import { ReactNode } from "react";
 
+export const cardClass =
+  "relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] card-hover";
+
 interface CardProps {
   children: ReactNode;
   className?: string;
@@ -12,7 +15,7 @@ export default function Card({
   className = "",
   href,
 }: CardProps) {
-  const baseClass = `relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] card-hover ${className}`;
+  const baseClass = `${cardClass} ${className}`;
 
   if (href) {
     return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   X,
   Github,
@@ -46,6 +46,8 @@ const links = [
 
 export default function GetInTouchModal() {
   const [open, setOpen] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (sessionStorage.getItem("getInTouchSeen")) return;
@@ -63,12 +65,47 @@ export default function GetInTouchModal() {
 
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+
+    previouslyFocused.current = document.activeElement as HTMLElement | null;
+
+    const dialog = dialogRef.current;
+    const focusables = () =>
+      Array.from(
+        dialog?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        ) ?? []
+      );
+
+    focusables()[0]?.focus();
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        return;
+      }
+      if (e.key !== "Tab") return;
+
+      const items = focusables();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement;
+
+      if (e.shiftKey && active === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      previouslyFocused.current?.focus();
     };
   }, [open]);
 
@@ -80,6 +117,10 @@ export default function GetInTouchModal() {
       onClick={() => setOpen(false)}
     >
       <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="get-in-touch-title"
         className="relative w-full max-w-md rounded-3xl bg-white border border-ink-900/[0.06] p-7 sm:p-8 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
@@ -94,7 +135,10 @@ export default function GetInTouchModal() {
         <p className="font-mono text-xs uppercase tracking-widest text-ink-500">
           Currently available · Replies within 24h
         </p>
-        <h2 className="mt-2 text-2xl sm:text-3xl text-ink-900 leading-tight">
+        <h2
+          id="get-in-touch-title"
+          className="mt-2 text-2xl sm:text-3xl text-ink-900 leading-tight"
+        >
           Got a project? Let&apos;s{" "}
           <span className="font-serif italic text-accent-600">talk</span>.
         </h2>
@@ -119,7 +163,7 @@ export default function GetInTouchModal() {
                 </span>
                 <ArrowUpRight
                   size={14}
-                  className="text-ink-400 group-hover:text-accent-600 group-hover:rotate-45 transition-all flex-shrink-0"
+                  className="text-ink-500 group-hover:text-accent-600 group-hover:rotate-45 transition-all flex-shrink-0"
                 />
               </a>
             </li>

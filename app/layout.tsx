@@ -6,27 +6,31 @@ import Footer from "@/components/Footer";
 import GetInTouchModal from "@/components/GetInTouchModal";
 
 const ubuntu = Ubuntu({
-  variable: "--font-geist-sans",
+  variable: "--font-ubuntu",
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
   display: "swap",
 });
 
 const ubuntuMono = Ubuntu_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-ubuntu-mono",
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
 });
 
 const handlee = Handlee({
-  variable: "--font-instrument-serif",
+  variable: "--font-handlee",
   weight: ["400"],
   subsets: ["latin"],
   display: "swap",
 });
 
+// Update to the real production domain once deployed.
+const siteUrl = "https://muneeb-portfolio.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Muneeb Ur Rehman — Product Engineer",
   description:
     "Muhammad Muneeb Ur Rehman — Product Engineer based in Pakistan. Building production web applications with Laravel, Next.js, and cloud-native infrastructure.",
@@ -43,6 +47,13 @@ export const metadata: Metadata = {
     description:
       "Building production web applications and cloud-native systems.",
     type: "website",
+    url: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Muneeb Ur Rehman — Product Engineer",
+    description:
+      "Building production web applications and cloud-native systems.",
   },
 };
 

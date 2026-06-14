@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3 md:col-start-8">
-            <p className="text-xs uppercase tracking-widest text-ink-400 mb-4">
+            <p className="text-xs uppercase tracking-widest text-ink-500 mb-4">
               Navigate
             </p>
             <ul className="space-y-2">
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <p className="text-xs uppercase tracking-widest text-ink-400 mb-4">
+            <p className="text-xs uppercase tracking-widest text-ink-500 mb-4">
               Elsewhere
             </p>
             <ul className="space-y-2">

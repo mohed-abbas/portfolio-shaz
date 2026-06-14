@@ -39,7 +39,8 @@ export default function ProjectsBarrel({
       const rect = el.getBoundingClientRect();
       const scrollable = el.offsetHeight - window.innerHeight;
       const scrolled = -rect.top;
-      setProgress(Math.max(0, Math.min(1, scrolled / scrollable)));
+      const ratio = scrollable > 0 ? scrolled / scrollable : 0;
+      setProgress(Math.max(0, Math.min(1, ratio)));
     };
 
     const onScroll = () => {
@@ -162,7 +163,7 @@ function ProjectCard({
           <div>
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="text-[10px] font-mono uppercase tracking-widest text-ink-400">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-ink-500">
                   {p.role}
                 </p>
                 <h2 className="mt-0.5 text-lg sm:text-xl text-ink-900 text-balance leading-snug">

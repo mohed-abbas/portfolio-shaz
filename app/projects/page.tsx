@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { ArrowUpRight, Github } from "lucide-react";
-import ProjectsBarrel from "@/components/ProjectsBarrel";
+import ProjectsBarrel, { type Project } from "@/components/ProjectsBarrel";
 
-const projects = [
+export const metadata: Metadata = {
+  title: "Projects — Muneeb Ur Rehman",
+  description:
+    "Featured engineering work by Muhammad Muneeb Ur Rehman — enterprise platforms, multi-tenant SaaS, AI integrations, and client engagements, every one live or delivered.",
+};
+
+const projects: Project[] = [
   {
     name: "VPMS",
     subtitle: "Multi-tenant SaaS for video production agencies",
@@ -89,7 +96,7 @@ export default function ProjectsPage() {
         projects={projects}
         header={
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-8 sm:pt-10">
-            <p className="text-xs font-mono uppercase tracking-widest text-ink-400 mb-2">
+            <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-2">
               / Projects · {projects.length} highlighted
             </p>
             <h1 className="text-display-md text-ink-900 max-w-3xl text-balance">

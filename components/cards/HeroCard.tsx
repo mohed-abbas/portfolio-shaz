@@ -1,9 +1,10 @@
 import { ArrowUpRight, Download, MapPin } from "lucide-react";
 import Link from "next/link";
+import { cardClass } from "@/components/cards/Card";
 
 export default function HeroCard() {
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] p-8 sm:p-10 lg:p-12 col-span-full lg:col-span-8 lg:row-span-2">
+    <div className={`${cardClass} p-8 sm:p-10 lg:p-12 col-span-full lg:col-span-8 lg:row-span-2`}>
       {/* Decorative grid pattern */}
       <div className="absolute inset-0 grid-pattern opacity-50 pointer-events-none" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl pointer-events-none" />

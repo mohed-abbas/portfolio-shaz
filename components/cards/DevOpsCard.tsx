@@ -2,11 +2,11 @@ import { Server } from "lucide-react";
 
 export default function DevOpsCard() {
   const items = [
-    { label: "AWS EC2", status: "running" },
-    { label: "Docker", status: "running" },
-    { label: "Nginx", status: "running" },
-    { label: "Cloudflare", status: "running" },
-    { label: "GitHub Actions", status: "running" },
+    { label: "AWS EC2", status: "in stack" },
+    { label: "Docker", status: "in stack" },
+    { label: "Nginx", status: "in stack" },
+    { label: "Cloudflare", status: "in stack" },
+    { label: "GitHub Actions", status: "in stack" },
   ];
 
   return (
@@ -16,13 +16,14 @@ export default function DevOpsCard() {
           <Server size={18} />
         </div>
         <div>
-          <p className="text-xs uppercase tracking-widest text-ink-400 font-mono">
+          <p className="text-xs uppercase tracking-widest text-ink-500 font-mono">
             Cloud &amp; DevOps
           </p>
           <p className="font-medium text-ink-900">Owned, not outsourced</p>
         </div>
       </div>
 
+      {/* Illustrative status display — represents the toolset, not live monitoring */}
       <ul className="space-y-2.5">
         {items.map((it) => (
           <li

@@ -1,4 +1,5 @@
 import { Github, ArrowUpRight } from "lucide-react";
+import { cardClass } from "@/components/cards/Card";
 
 export default function GithubCard() {
   return (
@@ -6,7 +7,7 @@ export default function GithubCard() {
       href="https://github.com/MMuneeb17"
       target="_blank"
       rel="noreferrer"
-      className="group relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] p-7 col-span-full sm:col-span-1 lg:col-span-5 card-hover flex flex-col justify-between"
+      className={`group ${cardClass} p-7 col-span-full sm:col-span-1 lg:col-span-5 flex flex-col justify-between`}
     >
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3">
@@ -14,7 +15,7 @@ export default function GithubCard() {
             <Github size={18} />
           </div>
           <div>
-            <p className="text-xs uppercase tracking-widest text-ink-400 font-mono">
+            <p className="text-xs uppercase tracking-widest text-ink-500 font-mono">
               GitHub
             </p>
             <p className="font-medium text-ink-900">@MMuneeb17</p>
@@ -22,22 +23,22 @@ export default function GithubCard() {
         </div>
         <ArrowUpRight
           size={18}
-          className="text-ink-400 group-hover:text-accent-500 group-hover:rotate-12 transition-all"
+          className="text-ink-500 group-hover:text-accent-500 group-hover:rotate-12 transition-all"
         />
       </div>
 
-      {/* Contribution graph mock */}
+      {/* Decorative contribution graph */}
       <div className="mt-6 grid grid-cols-13 gap-1">
         {Array.from({ length: 91 }).map((_, i) => {
-          const intensity = Math.random();
+          const level = (i * 7 + 3) % 5;
           const bg =
-            intensity > 0.85
+            level === 4
               ? "bg-accent-500"
-              : intensity > 0.65
+              : level === 3
               ? "bg-accent-400"
-              : intensity > 0.4
+              : level === 2
               ? "bg-accent-200"
-              : intensity > 0.2
+              : level === 1
               ? "bg-accent-100"
               : "bg-ink-900/[0.04]";
           return (

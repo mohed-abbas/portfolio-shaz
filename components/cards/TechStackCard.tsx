@@ -17,7 +17,7 @@ export default function TechStackCard() {
     <div className="relative overflow-hidden rounded-3xl bg-cream-50 border border-ink-900/[0.06] col-span-full lg:col-span-7 row-auto card-hover">
       <div className="p-6 sm:p-7 pb-3">
         <div className="flex items-center justify-between">
-          <p className="text-xs uppercase tracking-widest text-ink-400 font-mono">
+          <p className="text-xs uppercase tracking-widest text-ink-500 font-mono">
             Daily stack · Battle-tested
           </p>
           <span className="text-xs font-mono text-accent-600">{stacks.length}+</span>
@@ -34,7 +34,7 @@ export default function TechStackCard() {
             >
               <span className="w-1.5 h-1.5 rounded-full bg-accent-500" />
               {s.name}
-              <span className="text-ink-400 text-xs ml-1">{s.category}</span>
+              <span className="text-ink-500 text-xs ml-1">{s.category}</span>
             </span>
           ))}
         </div>

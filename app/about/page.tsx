@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { ArrowUpRight, Code, Database, Cloud, Brain, Building2, Download } from "lucide-react";
 import Image from "next/image";
+import { cardClass } from "@/components/cards/Card";
+
+export const metadata: Metadata = {
+  title: "About — Muneeb Ur Rehman",
+  description:
+    "Muhammad Muneeb Ur Rehman is a product and full-stack engineer who takes scoped ideas from empty repo to live, monitored production — schema, APIs, UI, and CI/CD owned end-to-end.",
+};
 
 const skillGroups = [
   {
@@ -88,7 +96,7 @@ export default function AboutPage() {
       {/* Header */}
       <div className="mb-16 flex flex-col-reverse sm:flex-row sm:items-center gap-8 sm:gap-10">
         <div className="flex-1 min-w-0 max-w-3xl">
-          <p className="text-xs font-mono uppercase tracking-widest text-ink-400 mb-4">
+          <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-4">
             / About
           </p>
           <h1 className="text-display-md text-ink-900 text-balance">
@@ -216,7 +224,7 @@ export default function AboutPage() {
             className="group flex items-center justify-between gap-4 rounded-3xl bg-white border border-ink-900/[0.06] p-6 card-hover"
           >
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-ink-400 mb-1">
+              <p className="font-mono text-xs uppercase tracking-widest text-ink-500 mb-1">
                 Prefer the one-pager?
               </p>
               <p className="text-base text-ink-900 font-medium">
@@ -233,7 +241,7 @@ export default function AboutPage() {
       {/* Principles */}
       <section className="mb-16">
         <div className="mb-8">
-          <p className="text-xs font-mono uppercase tracking-widest text-ink-400 mb-2">
+          <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-2">
             / How I work
           </p>
           <h2 className="text-3xl sm:text-4xl text-ink-900">
@@ -247,7 +255,7 @@ export default function AboutPage() {
           {principles.map((p) => (
             <div
               key={p.n}
-              className="relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] p-7 card-hover"
+              className={`${cardClass} p-7`}
             >
               <p className="font-serif text-5xl text-accent-500/30 italic">
                 {p.n}
@@ -264,7 +272,7 @@ export default function AboutPage() {
       {/* Skills */}
       <section>
         <div className="mb-8">
-          <p className="text-xs font-mono uppercase tracking-widest text-ink-400 mb-2">
+          <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-2">
             / Toolkit
           </p>
           <h2 className="text-3xl sm:text-4xl text-ink-900">
@@ -280,7 +288,7 @@ export default function AboutPage() {
             return (
               <div
                 key={group.title}
-                className="relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] p-7 card-hover"
+                className={`${cardClass} p-7`}
               >
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-10 h-10 rounded-2xl bg-accent-500/10 text-accent-600 flex items-center justify-center">

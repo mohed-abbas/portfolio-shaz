@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
 
 const logoRows = [
   ["M", "U", "H", "A", "M", "M", "A", "D"],
@@ -78,75 +77,88 @@ export default function OpeningScreen() {
     const root = rootRef.current;
     if (!root) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const ctx = gsap.context(() => {
-      if (reduceMotion) {
-        gsap.set(root, { autoAlpha: 0 });
-        hasPlayed = true;
-        setHidden(true);
-        return;
-      }
+    let alive = true;
+    let ctx: { revert: () => void } | null = null;
 
-      const timeline = gsap.timeline({
-        defaults: { ease: "power3.out" },
-        onComplete: () => {
+    const run = async () => {
+      const { default: gsap } = await import("gsap");
+      if (!alive) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      ctx = gsap.context(() => {
+        if (reduceMotion) {
+          gsap.set(root, { autoAlpha: 0 });
           hasPlayed = true;
           setHidden(true);
-        },
-      });
-      const cursor = root.querySelector<HTMLElement>(".intro-cursor");
-      const dots = gsap.utils
-        .toArray<HTMLElement>(".intro-dot")
-        .sort(
-          (a, b) =>
-            Number(a.dataset.writeOrder ?? 0) -
-            Number(b.dataset.writeOrder ?? 0)
-        );
-      const cursorPoint = (dot: HTMLElement) => {
-        const dotRect = dot.getBoundingClientRect();
-        const rootRect = root.getBoundingClientRect();
+          return;
+        }
 
-        return {
-          x: dotRect.left - rootRect.left + dotRect.width / 2,
-          y: dotRect.top - rootRect.top + dotRect.height / 2,
+        const timeline = gsap.timeline({
+          defaults: { ease: "power3.out" },
+          onComplete: () => {
+            hasPlayed = true;
+            setHidden(true);
+          },
+        });
+        const cursor = root.querySelector<HTMLElement>(".intro-cursor");
+        const dots = gsap.utils
+          .toArray<HTMLElement>(".intro-dot")
+          .sort(
+            (a, b) =>
+              Number(a.dataset.writeOrder ?? 0) -
+              Number(b.dataset.writeOrder ?? 0)
+          );
+        const cursorPoint = (dot: HTMLElement) => {
+          const dotRect = dot.getBoundingClientRect();
+          const rootRect = root.getBoundingClientRect();
+
+          return {
+            x: dotRect.left - rootRect.left + dotRect.width / 2,
+            y: dotRect.top - rootRect.top + dotRect.height / 2,
+          };
         };
-      };
-      const firstPoint = dots[0] ? cursorPoint(dots[0]) : { x: 0, y: 0 };
-
-      timeline
-        .set(".intro-word", { autoAlpha: 1 })
-        .set(dots, { autoAlpha: 0, scale: 0.35 })
-        .set(cursor, { autoAlpha: 0, x: firstPoint.x, y: firstPoint.y })
-        .to(cursor, { autoAlpha: 1, duration: 0.18 });
-
-      dots.forEach((dot, index) => {
-        const point = cursorPoint(dot);
+        const firstPoint = dots[0] ? cursorPoint(dots[0]) : { x: 0, y: 0 };
 
         timeline
-          .to(cursor, {
-            x: point.x,
-            y: point.y,
-            duration: index === 0 ? 0.01 : 0.022,
-            ease: "none",
-          })
-          .to(
-            dot,
-            {
-              autoAlpha: 1,
-              scale: 1,
-              duration: 0.022,
-              ease: "power2.out",
-            },
-            "<"
-          );
-      });
+          .set(".intro-word", { autoAlpha: 1 })
+          .set(dots, { autoAlpha: 0, scale: 0.35 })
+          .set(cursor, { autoAlpha: 0, x: firstPoint.x, y: firstPoint.y })
+          .to(cursor, { autoAlpha: 1, duration: 0.18 });
 
-      timeline
-        .to(cursor, { autoAlpha: 0, scale: 0.75, duration: 0.18 }, "+=0.3")
-        .to(root, { autoAlpha: 0, duration: 0.35, ease: "power2.inOut" }, "+=0.1");
-    }, root);
+        dots.forEach((dot, index) => {
+          const point = cursorPoint(dot);
 
-    return () => ctx.revert();
+          timeline
+            .to(cursor, {
+              x: point.x,
+              y: point.y,
+              duration: index === 0 ? 0.01 : 0.022,
+              ease: "none",
+            })
+            .to(
+              dot,
+              {
+                autoAlpha: 1,
+                scale: 1,
+                duration: 0.022,
+                ease: "power2.out",
+              },
+              "<"
+            );
+        });
+
+        timeline
+          .to(cursor, { autoAlpha: 0, scale: 0.75, duration: 0.18 }, "+=0.3")
+          .to(root, { autoAlpha: 0, duration: 0.35, ease: "power2.inOut" }, "+=0.1");
+      }, root);
+    };
+
+    run();
+
+    return () => {
+      alive = false;
+      ctx?.revert();
+    };
   }, []);
 
   if (hidden) return null;

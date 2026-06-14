@@ -7,9 +7,9 @@ A premium, light-themed Next.js portfolio for Muhammad Muneeb Ur Rehman, Full-St
 - **Next.js 14** (App Router)
 - **TypeScript**
 - **Tailwind CSS** (custom palette + animations)
-- **Geist** (sans + mono) and **Instrument Serif** via `next/font/google`
+- **Ubuntu** (sans + mono) and **Handlee** via `next/font/google`
 - **Lucide React** icons
-- **Framer Motion** (available, currently using CSS animations for performance)
+- **GSAP** — opening-screen intro animation (loaded dynamically, code-split out of the initial bundle)
 
 ## 🚀 Getting Started
 
@@ -48,6 +48,7 @@ muneeb-portfolio/
 │   ├── Navbar.tsx
 │   ├── Footer.tsx
 │   └── cards/            # Bento grid card components
+│       ├── Card.tsx       # Shared tile primitive (exports `cardClass`)
 │       ├── HeroCard.tsx
 │       ├── AvatarCard.tsx
 │       ├── TechStackCard.tsx
@@ -55,8 +56,7 @@ muneeb-portfolio/
 │       ├── FeaturedCard.tsx
 │       ├── AICard.tsx
 │       ├── DevOpsCard.tsx
-│       ├── QuoteCard.tsx
-│       └── ContactCard.tsx
+│       └── QuoteCard.tsx
 ├── tailwind.config.ts    # Custom palette + animations
 ├── tsconfig.json
 ├── next.config.mjs
@@ -78,9 +78,9 @@ muneeb-portfolio/
 
 ### Typography
 
-- **Display** — Instrument Serif (italic for emphasis)
-- **Body** — Geist Sans
-- **Mono** — Geist Mono (for labels, captions, code)
+- **Display** — Handlee (handwritten accent for emphasis)
+- **Body** — Ubuntu
+- **Mono** — Ubuntu Mono (for labels, captions, code)
 
 ### Animations
 

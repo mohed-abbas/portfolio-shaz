@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { Briefcase, GraduationCap, Award } from "lucide-react";
+import { cardClass } from "@/components/cards/Card";
+
+export const metadata: Metadata = {
+  title: "Experience — Muneeb Ur Rehman",
+  description:
+    "Five years of production engineering by Muhammad Muneeb Ur Rehman — across enterprise systems, SaaS, and freelance work, from PHP intern to end-to-end owner.",
+};
 
 const experiences = [
   {
@@ -78,7 +86,7 @@ export default function ExperiencePage() {
     <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-12 sm:py-16">
       {/* Header */}
       <div className="mb-14">
-        <p className="text-xs font-mono uppercase tracking-widest text-ink-400 mb-4">
+        <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-4">
           / Experience · 5+ years
         </p>
         <h1 className="text-display-md text-ink-900 max-w-3xl text-balance">
@@ -130,7 +138,7 @@ export default function ExperiencePage() {
 
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
                   <div>
-                    <p className="text-xs font-mono uppercase tracking-widest text-ink-400">
+                    <p className="text-xs font-mono uppercase tracking-widest text-ink-500">
                       {exp.type}
                     </p>
                     <h2 className="mt-1 text-2xl sm:text-3xl text-ink-900">
@@ -142,7 +150,7 @@ export default function ExperiencePage() {
                   </div>
                   <div className="text-left sm:text-right text-sm">
                     <p className="font-mono text-ink-700">{exp.period}</p>
-                    <p className="text-ink-400 mt-1">{exp.location}</p>
+                    <p className="text-ink-500 mt-1">{exp.location}</p>
                   </div>
                 </div>
 
@@ -181,7 +189,7 @@ export default function ExperiencePage() {
             <GraduationCap size={16} />
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-ink-400">
+            <p className="text-xs font-mono uppercase tracking-widest text-ink-500">
               Credentials
             </p>
             <h2 className="text-3xl text-ink-900">
@@ -194,14 +202,14 @@ export default function ExperiencePage() {
           {education.map((ed) => (
             <article
               key={ed.school}
-              className="relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] p-7 card-hover"
+              className={`${cardClass} p-7`}
             >
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-2xl bg-accent-500/10 text-accent-600 flex items-center justify-center flex-shrink-0">
                   <Award size={18} />
                 </div>
                 <div className="flex-1">
-                  <p className="font-mono text-xs text-ink-400 uppercase tracking-widest">
+                  <p className="font-mono text-xs text-ink-500 uppercase tracking-widest">
                     {ed.period}
                   </p>
                   <h3 className="mt-1 text-xl text-ink-900">
