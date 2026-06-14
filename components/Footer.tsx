@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="font-serif italic text-accent-500">that stays up.</span>
             </p>
             <p className="mt-4 text-ink-500 max-w-md">
-              Open to senior product-engineering roles and long-term remote
+              Open to senior full-stack roles and long-term remote
               contracts. Replies within 24 hours, in your timezone.
             </p>
             <a
