@@ -1,13 +1,8 @@
 import { Server } from "lucide-react";
+import home from "@/data/home.json";
 
 export default function DevOpsCard() {
-  const items = [
-    { label: "AWS EC2", status: "in stack" },
-    { label: "Docker", status: "in stack" },
-    { label: "Nginx", status: "in stack" },
-    { label: "Cloudflare", status: "in stack" },
-    { label: "GitHub Actions", status: "in stack" },
-  ];
+  const { eyebrow, subtitle, items } = home.devops;
 
   return (
     <div className="relative overflow-hidden rounded-3xl bg-cream-50 border border-ink-900/[0.06] p-7 col-span-full sm:col-span-1 lg:col-span-4 card-hover">
@@ -17,9 +12,9 @@ export default function DevOpsCard() {
         </div>
         <div>
           <p className="text-xs uppercase tracking-widest text-ink-500 font-mono">
-            Cloud &amp; DevOps
+            {eyebrow}
           </p>
-          <p className="font-medium text-ink-900">Owned, not outsourced</p>
+          <p className="font-medium text-ink-900">{subtitle}</p>
         </div>
       </div>
 

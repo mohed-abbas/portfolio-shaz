@@ -1,14 +1,11 @@
 import { Brain } from "lucide-react";
 import Image from "next/image";
 import { cardClass } from "@/components/cards/Card";
-
-const providers = [
-  { name: "OpenAI", logo: "/openai-icon-logo.svg" },
-  { name: "Claude", logo: "/claude-icon-logo.svg" },
-  { name: "Gemini", logo: "/gemini-icon-logo.svg" },
-];
+import home from "@/data/home.json";
 
 export default function AICard() {
+  const { eyebrow, subtitle, copy, providers } = home.ai;
+
   return (
     <div className={`${cardClass} p-7 col-span-full sm:col-span-1 lg:col-span-5`}>
       <div className="flex items-start gap-4 mb-5">
@@ -17,15 +14,14 @@ export default function AICard() {
         </div>
         <div>
           <p className="text-xs uppercase tracking-widest text-ink-500 font-mono">
-            AI in production
+            {eyebrow}
           </p>
-          <p className="font-medium text-ink-900">Shipped, not demoed</p>
+          <p className="font-medium text-ink-900">{subtitle}</p>
         </div>
       </div>
 
       <p className="text-2xl text-ink-900 leading-snug">
-        LLM-powered features, conversational interfaces, and prompt-engineered
-        workflows — running for real users, not just on a slide.
+        {copy}
       </p>
 
       <div className="mt-6 grid grid-cols-3 gap-2">

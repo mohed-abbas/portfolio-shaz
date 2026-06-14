@@ -10,39 +10,10 @@ import {
   Instagram,
   ArrowUpRight,
 } from "lucide-react";
+import links from "@/data/social.json";
+import contact from "@/data/contact.json";
 
-const links = [
-  {
-    label: "GitHub",
-    handle: "@MMuneeb17",
-    href: "https://github.com/MMuneeb17",
-    icon: Github,
-  },
-  {
-    label: "LinkedIn",
-    handle: "in/muneeb17",
-    href: "https://linkedin.com/in/muneeb17",
-    icon: Linkedin,
-  },
-  {
-    label: "Email",
-    handle: "mmunibrehman@gmail.com",
-    href: "mailto:mmunibrehman@gmail.com",
-    icon: Mail,
-  },
-  {
-    label: "Facebook",
-    handle: "M.Munib.ur.Rehman",
-    href: "https://www.facebook.com/M.Munib.ur.Rehman/",
-    icon: Facebook,
-  },
-  {
-    label: "Instagram",
-    handle: "@i_muneeb__",
-    href: "https://www.instagram.com/i_muneeb__/",
-    icon: Instagram,
-  },
-];
+const icons = { Github, Linkedin, Mail, Facebook, Instagram };
 
 export default function GetInTouchModal() {
   const [open, setOpen] = useState(false);
@@ -133,22 +104,26 @@ export default function GetInTouchModal() {
         </button>
 
         <p className="font-mono text-xs uppercase tracking-widest text-ink-500">
-          Currently available · Replies within 24h
+          {contact.eyebrow}
         </p>
         <h2
           id="get-in-touch-title"
           className="mt-2 text-2xl sm:text-3xl text-ink-900 leading-tight"
         >
-          Got a project? Let&apos;s{" "}
-          <span className="font-serif italic text-accent-600">talk</span>.
+          {contact.title.before}
+          <span className="font-serif italic text-accent-600">
+            {contact.title.accent}
+          </span>
+          {contact.title.after}
         </h2>
         <p className="mt-3 text-sm text-ink-500 leading-relaxed">
-          Email is fastest — share what you&apos;re building and the rough
-          timeline. I&apos;ll come back with a plan.
+          {contact.blurb}
         </p>
 
         <ul className="mt-6 space-y-2">
-          {links.map(({ label, handle, href, icon: Icon }) => (
+          {links.map(({ label, handle, href, icon }) => {
+            const Icon = icons[icon as keyof typeof icons];
+            return (
             <li key={label}>
               <a
                 href={href}
@@ -167,7 +142,8 @@ export default function GetInTouchModal() {
                 />
               </a>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </div>
     </div>

@@ -1,8 +1,13 @@
 import { ArrowUpRight, Download, MapPin } from "lucide-react";
 import Link from "next/link";
 import { cardClass } from "@/components/cards/Card";
+import RichText, { type Segment } from "@/components/RichText";
+import profile from "@/data/profile.json";
+import home from "@/data/home.json";
 
 export default function HeroCard() {
+  const { intro, ctas, badges } = home.hero;
+
   return (
     <div className={`${cardClass} p-8 sm:p-10 lg:p-12 col-span-full lg:col-span-8 lg:row-span-2`}>
       {/* Decorative grid pattern */}
@@ -11,24 +16,20 @@ export default function HeroCard() {
 
       <div className="relative">
         <h1 className="text-display-lg text-ink-900 text-balance">
-          Muhammad <span className="font-serif italic text-accent-600">Muneeb</span> <br />
-          Ur Rehman
+          {profile.firstName} <span className="font-serif italic text-accent-600">{profile.accentName}</span> <br />
+          {profile.lastName}
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-ink-600 max-w-2xl leading-relaxed text-balance">
-          Product Engineer who takes web apps from{" "}
-          <span className="text-ink-900 font-medium">empty repo</span> to{" "}
-          <span className="text-ink-900 font-medium">live, monitored production</span>
-          {" "}— database, APIs, UI, infrastructure, and the CI/CD that keeps
-          it shipping.
+          <RichText segments={intro as Segment[]} emClass="text-ink-900 font-medium" />
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <a
-            href="mailto:mmunibrehman@gmail.com?subject=Project%20inquiry"
+            href={`mailto:${profile.email}?subject=Project%20inquiry`}
             className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-ink-900 text-cream-100 hover:bg-accent-500 transition-colors"
           >
-            Hire me for a project
+            {ctas.hire}
             <ArrowUpRight
               size={16}
               className="group-hover:rotate-45 transition-transform"
@@ -38,31 +39,29 @@ export default function HeroCard() {
             href="/projects"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-ink-900/10 text-ink-900 hover:border-ink-900/30 transition-colors"
           >
-            See selected work
+            {ctas.work}
           </Link>
           <a
-            href="/Muhammad_Muneeb_Resume.docx"
+            href={profile.resumeUrl}
             download
             className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-ink-900/10 text-ink-900 hover:border-ink-900/30 transition-colors"
           >
             <Download size={16} className="group-hover:translate-y-0.5 transition-transform" />
-            Download resume
+            {ctas.resume}
           </a>
         </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-ink-500">
-          <span className="inline-flex items-center gap-1.5">
-            <MapPin size={14} className="text-accent-600" />
-            Pakistan · Remote-ready worldwide
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="w-1 h-1 rounded-full bg-ink-300" />
-            5+ years in production
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="w-1 h-1 rounded-full bg-ink-300" />
-            Open to roles &amp; contracts
-          </span>
+          {badges.map((badge, i) => (
+            <span key={badge} className="inline-flex items-center gap-1.5">
+              {i === 0 ? (
+                <MapPin size={14} className="text-accent-600" />
+              ) : (
+                <span className="w-1 h-1 rounded-full bg-ink-300" />
+              )}
+              {badge}
+            </span>
+          ))}
         </div>
       </div>
     </div>

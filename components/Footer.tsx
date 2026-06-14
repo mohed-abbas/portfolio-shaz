@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import navigation from "@/data/navigation.json";
+import social from "@/data/social.json";
+import profile from "@/data/profile.json";
+
+const icons = { Github, Linkedin, Mail };
 
 export default function Footer() {
   return (
@@ -16,10 +21,10 @@ export default function Footer() {
               contracts. Replies within 24 hours, in your timezone.
             </p>
             <a
-              href="mailto:mmunibrehman@gmail.com?subject=Project%20inquiry"
+              href={`mailto:${profile.email}?subject=Project%20inquiry`}
               className="mt-6 inline-flex items-center gap-2 text-ink-900 font-medium border-b-2 border-ink-900 pb-1 hover:gap-3 transition-all"
             >
-              mmunibrehman@gmail.com
+              {profile.email}
               <ArrowUpRight size={16} />
             </a>
           </div>
@@ -29,12 +34,7 @@ export default function Footer() {
               Navigate
             </p>
             <ul className="space-y-2">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/projects", label: "Projects" },
-                { href: "/experience", label: "Experience" },
-                { href: "/about", label: "About" },
-              ].map((l) => (
+              {navigation.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
@@ -52,43 +52,29 @@ export default function Footer() {
               Elsewhere
             </p>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://github.com/MMuneeb17"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-ink-700 hover:text-accent-500 transition-colors"
-                >
-                  <Github size={14} />
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com/in/muneeb17"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-ink-700 hover:text-accent-500 transition-colors"
-                >
-                  <Linkedin size={14} />
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:mmunibrehman@gmail.com"
-                  className="inline-flex items-center gap-2 text-ink-700 hover:text-accent-500 transition-colors"
-                >
-                  <Mail size={14} />
-                  Email
-                </a>
-              </li>
+              {social.slice(0, 3).map((item) => {
+                const Icon = icons[item.icon as keyof typeof icons];
+                const external = !item.href.startsWith("mailto:");
+                return (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noreferrer" : undefined}
+                      className="inline-flex items-center gap-2 text-ink-700 hover:text-accent-500 transition-colors"
+                    >
+                      <Icon size={14} />
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-ink-900/[0.06] text-sm text-ink-500">
-          <p>© {new Date().getFullYear()} Muhammad Muneeb Ur Rehman. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {profile.fullName}. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,6 +1,9 @@
 import { Code2 } from "lucide-react";
+import home from "@/data/home.json";
 
 export default function AvatarCard() {
+  const { path, whoami, role, stack } = home.terminal;
+
   return (
     <div className="relative overflow-hidden rounded-3xl bg-ink-900 text-cream-100 p-7 col-span-full sm:col-span-1 lg:col-span-4 aspect-square lg:aspect-auto card-hover">
       {/* Animated terminal background */}
@@ -19,7 +22,7 @@ export default function AvatarCard() {
             <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/80" />
             <span className="w-2.5 h-2.5 rounded-full bg-accent-500" />
           </div>
-          <span className="font-mono text-[10px] text-cream-100/40">~/muneeb</span>
+          <span className="font-mono text-[10px] text-cream-100/40">{path}</span>
         </div>
 
         <div className="mt-8 font-mono text-sm space-y-2">
@@ -27,21 +30,21 @@ export default function AvatarCard() {
             <span className="text-accent-400">$</span>{" "}
             <span className="text-cream-100/60">whoami</span>
           </p>
-          <p className="text-cream-100">muneeb_ur_rehman</p>
+          <p className="text-cream-100">{whoami}</p>
           <p className="mt-4">
             <span className="text-accent-400">$</span>{" "}
             <span className="text-cream-100/60">cat role.txt</span>
           </p>
           <p className="text-cream-100 leading-relaxed">
-            Product Engineer · Ships end-to-end
+            {role}
           </p>
           <p className="mt-4">
             <span className="text-accent-400">$</span>{" "}
             <span className="text-cream-100/60">ls daily-stack/</span>
           </p>
           <p className="text-cream-100/80">
-            laravel · next.js · aws<br />
-            postgres · docker · ci-cd
+            {stack[0]}<br />
+            {stack[1]}
           </p>
           <p className="mt-2 inline-flex items-center text-accent-400">
             <span className="text-accent-400">$</span>

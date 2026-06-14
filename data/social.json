@@ -1,0 +1,32 @@
+[
+  {
+    "label": "GitHub",
+    "handle": "@MMuneeb17",
+    "href": "https://github.com/MMuneeb17",
+    "icon": "Github"
+  },
+  {
+    "label": "LinkedIn",
+    "handle": "in/muneeb17",
+    "href": "https://linkedin.com/in/muneeb17",
+    "icon": "Linkedin"
+  },
+  {
+    "label": "Email",
+    "handle": "mmunibrehman@gmail.com",
+    "href": "mailto:mmunibrehman@gmail.com",
+    "icon": "Mail"
+  },
+  {
+    "label": "Facebook",
+    "handle": "M.Munib.ur.Rehman",
+    "href": "https://www.facebook.com/M.Munib.ur.Rehman/",
+    "icon": "Facebook"
+  },
+  {
+    "label": "Instagram",
+    "handle": "@i_muneeb__",
+    "href": "https://www.instagram.com/i_muneeb__/",
+    "icon": "Instagram"
+  }
+]

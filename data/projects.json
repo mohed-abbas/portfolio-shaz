@@ -1,0 +1,95 @@
+{
+  "page": {
+    "eyebrowPrefix": "/ Projects · ",
+    "eyebrowSuffix": " highlighted",
+    "heading": [
+      { "text": "Real systems, real users, " },
+      { "text": "shipped", "em": true },
+      { "text": "." }
+    ],
+    "subhead": "A focused selection across enterprise platforms, AI integrations, and client engagements — every project below is live or has been delivered to its owners.",
+    "cta": {
+      "eyebrow": "Currently accepting new work · Replies within 24h",
+      "line": [
+        { "text": "Have something that needs " },
+        { "text": "shipping", "em": true },
+        { "text": "? Let's scope it together." }
+      ],
+      "supporting": "One engineer, full ownership, and a 5-year track record of production deliveries. Tell me the goal — I'll come back with a plan and a timeline.",
+      "startLabel": "Start a project",
+      "githubLabel": "More work on GitHub"
+    }
+  },
+  "projects": [
+    {
+      "name": "VPMS",
+      "subtitle": "Multi-tenant SaaS for video production agencies",
+      "description": "Full-stack platform replacing the Asana + Frame.io + Slack patchwork creative studios stitch together. 60+ API endpoints, 25+ pages, real-time WebSocket notifications, token-auth client portal, Stripe billing, white-labeling, and the production deploy pipeline — owned end-to-end. Live at vpms.sovstac.com.",
+      "tags": ["Django", "Next.js", "PostgreSQL", "Redis", "Stripe", "WebSockets"],
+      "role": "Sole Engineer",
+      "year": "2025 → Live",
+      "status": "in production",
+      "gradient": "from-accent-600 to-ink-800"
+    },
+    {
+      "name": "FCCMS",
+      "subtitle": "Housing-society platform shipped solo",
+      "description": "Live system used daily for resident records, maintenance, inventory, and complaints. Owned end-to-end: PostgreSQL schema, Laravel REST APIs, Next.js + TypeScript UI, AWS deployment, CI/CD.",
+      "tags": ["Laravel", "Next.js", "TypeScript", "PostgreSQL", "AWS"],
+      "role": "Sole Engineer",
+      "year": "2024 → Live",
+      "status": "in production",
+      "gradient": "from-accent-800 to-accent-500"
+    },
+    {
+      "name": "Network Scanner Suite",
+      "subtitle": "IT automation that buys back hours",
+      "description": "Python tooling for daily corporate IT operations — a network scanner and a remote installer that rolls out endpoint software across the network without touching individual machines.",
+      "tags": ["Python", "Bash", "Networking", "Automation"],
+      "role": "Sole Engineer",
+      "year": "2025",
+      "status": "in production",
+      "gradient": "from-ink-800 to-ink-900"
+    },
+    {
+      "name": "AI-Powered Web Apps",
+      "subtitle": "LLM features in real client products",
+      "description": "Production AI work across multiple client applications — LLM-powered features, conversational interfaces, and prompt-engineered workflows on OpenAI, Anthropic Claude, and Google Gemini.",
+      "tags": ["OpenAI", "Claude", "Gemini", "Next.js", "Prompt Engineering"],
+      "role": "Product Engineer",
+      "year": "2023 → Now",
+      "status": "ongoing",
+      "gradient": "from-accent-800 to-accent-600"
+    },
+    {
+      "name": "Panther Tech Engagements",
+      "subtitle": "Contract feature work for shipped products",
+      "description": "Scoped customization, feature builds, and bug fixes inside existing client codebases — delivered on tight timelines with clean handoffs back to internal teams.",
+      "tags": ["Laravel", "PHP", "MySQL", "React"],
+      "role": "Contractor",
+      "year": "2022 → 2024",
+      "status": "delivered",
+      "gradient": "from-ink-700 to-ink-800"
+    },
+    {
+      "name": "Capregsoft Production Apps",
+      "subtitle": "Full-stack products across the SDLC",
+      "description": "Architected and shipped multiple full-stack web products — relational schemas, Laravel and Django REST APIs, and TypeScript React/Next.js frontends — backed by MySQL and PostgreSQL.",
+      "tags": ["Laravel", "Django", "React", "Next.js", "PostgreSQL"],
+      "role": "Software Engineer",
+      "year": "2022 → 2024",
+      "status": "delivered",
+      "gradient": "from-accent-700 to-ink-800"
+    },
+    {
+      "name": "Linknb1t Platform Work",
+      "subtitle": "Real-time Laravel apps for internal teams",
+      "description": "Promoted from PHP intern to Software Engineer in the first month. Engineered Laravel + MySQL applications and shipped real-time interfaces using Laravel Livewire and AJAX-driven workflows.",
+      "tags": ["Laravel", "Livewire", "MySQL", "AJAX", "PHP"],
+      "role": "Software Engineer",
+      "year": "2020 → 2022",
+      "status": "shipped",
+      "gradient": "from-ink-800 to-accent-700"
+    }
+  ]
+}

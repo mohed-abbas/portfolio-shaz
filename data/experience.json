@@ -1,0 +1,86 @@
+{
+  "page": {
+    "eyebrow": "/ Experience · 5+ years",
+    "heading": [
+      { "text": "PHP intern to " },
+      { "text": "end-to-end owner", "em": true },
+      { "text": " — on the same trajectory ever since." }
+    ],
+    "subhead": "Five years of production engineering across enterprise systems, SaaS, and freelance work — promoted on output, retained on reliability, and still shipping every week.",
+    "education": {
+      "eyebrow": "Credentials",
+      "heading": "Education"
+    }
+  },
+  "experiences": [
+    {
+      "company": "Fauji Cement Company Limited",
+      "role": "Management Trainee Officer",
+      "period": "Nov 2024 — Present",
+      "location": "On-site · Pakistan",
+      "type": "Full-time",
+      "bullets": [
+        "Designed, built, and shipped FCCMS (Fauji Cement Colony Management System) solo — a housing-society platform now live and used daily for resident records, maintenance workflows, inventory, and complaint tracking.",
+        "Owned the full delivery chain: PostgreSQL schema, Laravel REST APIs, Next.js + TypeScript frontend, AWS deployment, and CI/CD.",
+        "Cut hours from daily IT operations with Python automation — a network scanner and a remote installer that rolls out endpoint software across the corporate network.",
+        "Acted as a force-multiplier for the IT function across EMS, ERP, networking, and on-site hardware support."
+      ],
+      "stack": ["Laravel", "Next.js", "TypeScript", "Python", "PostgreSQL"],
+      "current": true
+    },
+    {
+      "company": "Capregsoft",
+      "role": "Software Engineer",
+      "period": "Jun 2022 — Sep 2024",
+      "location": "Hybrid",
+      "type": "Full-time",
+      "bullets": [
+        "Shipped multiple full-stack web products across the SDLC — relational schemas, Laravel and Django REST APIs, and React/Next.js frontends — for paying customers.",
+        "Worked inside an agile team: Git-based reviews, sprint planning, and a strong feedback culture that kept release velocity high without breaking trunk.",
+        "Tightened performance, hardened deploys, and matured CI/CD pipelines alongside product, design, and QA stakeholders."
+      ],
+      "stack": ["Laravel", "Django", "React", "Next.js", "MySQL", "PostgreSQL"]
+    },
+    {
+      "company": "Freelance · Devlin Solutions",
+      "role": "Product Engineer",
+      "period": "Jan 2021 — Present",
+      "location": "Remote · Worldwide",
+      "type": "Independent",
+      "bullets": [
+        "Delivered end-to-end web products for international and local clients via Upwork, Fiverr, and direct engagements — a track record of repeat hires and long retention.",
+        "Built typed Next.js/React frontends, Laravel and Django APIs, schema design, cloud deployment, and the ongoing maintenance work that keeps the bills paid post-launch.",
+        "Executed scoped contract engagements (incl. with Panther Tech) — feature builds, targeted refactors, and bug fixes shipped on tight timelines.",
+        "Embedded production-grade AI into client products with OpenAI, Anthropic Claude, and Google Gemini — measurable workflow features, not chatbot demos."
+      ],
+      "stack": ["Next.js", "Laravel", "Django", "AWS", "OpenAI", "Claude"],
+      "accent": true
+    },
+    {
+      "company": "Linknb1t",
+      "role": "Software Engineer",
+      "period": "Aug 2020 — Mar 2022",
+      "location": "On-site",
+      "type": "Full-time",
+      "bullets": [
+        "Joined as a PHP intern and promoted to Software Engineer inside the first month — picked up the codebase and started shipping features alongside seniors.",
+        "Built and maintained Laravel applications on MySQL — owned features from ticket to release.",
+        "Shipped real-time interfaces with Laravel Livewire and AJAX, including dashboards and operations tools used daily by internal teams."
+      ],
+      "stack": ["Laravel", "Livewire", "MySQL", "AJAX"]
+    }
+  ],
+  "education": [
+    {
+      "school": "COMSATS University Islamabad",
+      "degree": "Bachelor of Science in Computer Science",
+      "period": "Sep 2018 — Jun 2023"
+    },
+    {
+      "school": "Amal Academy (Stanford-funded)",
+      "degree": "Career-Prep Fellow",
+      "period": "Dec 2021 — Feb 2022",
+      "note": "Selected from 4,500+ applicants for a 150-hour Stanford-funded program in communication, leadership, and structured problem-solving."
+    }
+  ]
+}

@@ -1,16 +1,9 @@
 "use client";
 
-const stacks = [
-  { name: "TypeScript", category: "Build" },
-  { name: "Next.js", category: "Build" },
-  { name: "Python", category: "Build" },
-  { name: "PostgreSQL", category: "Data" },
-  { name: "pgvector", category: "Data" },
-  { name: "Claude API", category: "Data" },
-  { name: "AWS", category: "Ship" },
-  { name: "Cloudflare", category: "Ship" },
-  { name: "Docker", category: "Ship" },
-];
+import RichText, { type Segment } from "@/components/RichText";
+import home from "@/data/home.json";
+
+const { stacks, caption } = home.techStack;
 
 export default function TechStackCard() {
   return (
@@ -57,9 +50,7 @@ export default function TechStackCard() {
 
       <div className="p-6 sm:p-7 pt-3">
         <p className="text-2xl text-ink-900 leading-snug">
-          From <span className="font-serif italic text-accent-600">schema</span> to{" "}
-          <span className="font-serif italic text-accent-600">production</span> — one
-          engineer, the full stack, no handoffs lost in translation.
+          <RichText segments={caption as Segment[]} emClass="font-serif italic text-accent-600" />
         </p>
       </div>
 

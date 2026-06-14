@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { ArrowUpRight, Code, Database, Cloud, Brain, Building2, Download } from "lucide-react";
 import Image from "next/image";
 import { cardClass } from "@/components/cards/Card";
+import RichText, { type Segment } from "@/components/RichText";
+import profile from "@/data/profile.json";
+import about from "@/data/about.json";
 
 export const metadata: Metadata = {
   title: "About — Muneeb Ur Rehman",
@@ -9,86 +12,10 @@ export const metadata: Metadata = {
     "Muhammad Muneeb Ur Rehman is a product and full-stack engineer who takes scoped ideas from empty repo to live, monitored production — schema, APIs, UI, and CI/CD owned end-to-end.",
 };
 
-const skillGroups = [
-  {
-    icon: Code,
-    title: "Languages & Frameworks",
-    items: [
-      "PHP (Laravel)",
-      "JavaScript / TypeScript",
-      "Next.js, React, Vue.js",
-      "Tailwind CSS",
-      "Python (Django)",
-      "C#, ABAP, Bash",
-      "REST API design",
-    ],
-  },
-  {
-    icon: Database,
-    title: "Databases",
-    items: ["PostgreSQL", "MySQL", "Oracle", "SQL"],
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & DevOps",
-    items: [
-      "AWS (EC2)",
-      "Docker",
-      "Nginx",
-      "Cloudflare",
-      "Linux / Ubuntu",
-      "Git / GitHub",
-      "CI/CD (Actions, GitLab CI)",
-      "Server administration",
-    ],
-  },
-  {
-    icon: Brain,
-    title: "AI Integration",
-    items: [
-      "OpenAI",
-      "Anthropic Claude",
-      "Google Gemini",
-      "LLM API integration",
-      "Prompt engineering",
-    ],
-  },
-  {
-    icon: Building2,
-    title: "Enterprise & IT",
-    items: [
-      "SAP",
-      "ABAP development",
-      "Power BI",
-      "ERP / EMS",
-      "Network troubleshooting",
-      "IT support",
-    ],
-  },
-];
+const icons = { Code, Database, Cloud, Brain, Building2 };
 
-const principles = [
-  {
-    n: "01",
-    title: "End-to-end ownership",
-    body: "One engineer, full accountability — schema, APIs, UI, deployment, and CI/CD. No baton drops between roles.",
-  },
-  {
-    n: "02",
-    title: "Production-first thinking",
-    body: "Decisions optimized for the day after launch: easy to deploy, easy to debug, dependable when traffic is real.",
-  },
-  {
-    n: "03",
-    title: "Async-first communication",
-    body: "Clear writeups, predictable updates, and clean handoffs. Built for distributed teams and long-term contracts.",
-  },
-  {
-    n: "04",
-    title: "Five years of shipping",
-    body: "Enterprise systems, SaaS products, AI integrations, and client work — all delivered to live, paying users.",
-  },
-];
+const accentEm = "font-serif italic text-accent-600";
+const boldEm = "text-ink-900 font-medium";
 
 export default function AboutPage() {
   return (
@@ -97,21 +24,19 @@ export default function AboutPage() {
       <div className="mb-16 flex flex-col-reverse sm:flex-row sm:items-center gap-8 sm:gap-10">
         <div className="flex-1 min-w-0 max-w-3xl">
           <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-4">
-            / About
+            {about.header.eyebrow}
           </p>
           <h1 className="text-display-md text-ink-900 text-balance">
-            A product engineer who{" "}
-            <span className="font-serif italic text-accent-600">finishes the job</span>.
+            <RichText segments={about.header.headingSegments as Segment[]} emClass={accentEm} />
           </h1>
           <p className="mt-5 text-lg text-ink-500 max-w-2xl">
-            Five years building the messy middle between an idea and a system real
-            people rely on — and the receipts to prove it.
+            {about.header.subhead}
           </p>
         </div>
         <div className="relative flex-shrink-0 self-start sm:self-center">
           <div className="absolute -inset-3 bg-accent-500/10 rounded-full blur-2xl" aria-hidden />
           <Image
-            src="/muneeb-photo.jpg"
+            src={profile.photo}
             alt="Muneeb Ur Rehman"
             width={320}
             height={320}
@@ -127,41 +52,18 @@ export default function AboutPage() {
           <div className="absolute inset-0 grid-pattern opacity-50 pointer-events-none" />
           <div className="relative">
             <p className="text-3xl sm:text-4xl text-ink-900 leading-snug text-balance">
-              I&apos;m{" "}
-              <span className="font-serif italic text-accent-600">Muneeb</span> —
-              a product engineer who turns scoped ideas into running software.
+              <RichText segments={about.intro.leadSegments as Segment[]} emClass={accentEm} />
             </p>
             <div className="mt-6 space-y-4 text-ink-600 leading-relaxed">
-              <p>
-                For the last five years I&apos;ve been the engineer who takes
-                a project from empty repo to live, monitored production:
-                relational schemas, REST APIs, modern frontends, cloud
-                deployment, and the CI/CD that keeps it shipping. I&apos;m
-                fluent across the stack, but my best work happens in the
-                messy middle — where requirements, edge cases, and real
-                traffic finally meet.
-              </p>
-              <p>
-                Right now I&apos;m building{" "}
-                <span className="text-ink-900 font-medium">FCCMS</span> at{" "}
-                Fauji Cement — a complete housing-society platform shipped
-                solo — alongside freelance engagements integrating LLMs
-                into production client applications.
-              </p>
-              <p>
-                Independently, I deliver work across Laravel, Next.js, Django,
-                and AI stacks like{" "}
-                <span className="text-ink-900 font-medium">OpenAI</span>,{" "}
-                <span className="text-ink-900 font-medium">Claude</span>, and{" "}
-                <span className="text-ink-900 font-medium">Gemini</span> — for
-                clients who need a single accountable engineer, not a relay
-                team.
-              </p>
-              <p>
-                Open to senior product-engineering roles and long-term
-                remote contracts. Async-first, written-first, and allergic
-                to dropped handoffs.
-              </p>
+              {about.intro.body.map((para, i) => (
+                <p key={i}>
+                  {typeof para === "string" ? (
+                    para
+                  ) : (
+                    <RichText segments={para as Segment[]} emClass={boldEm} />
+                  )}
+                </p>
+              ))}
             </div>
           </div>
         </div>
@@ -171,45 +73,38 @@ export default function AboutPage() {
             <div className="absolute -top-12 -right-12 w-48 h-48 bg-accent-500/30 rounded-full blur-3xl" />
             <div className="relative">
               <p className="font-mono text-xs uppercase tracking-widest text-cream-100/40">
-                Quick facts
+                {about.quickFacts.eyebrow}
               </p>
               <ul className="mt-5 space-y-3 text-sm">
-                <li className="flex justify-between gap-4 pb-3 border-b border-cream-100/10">
-                  <span className="text-cream-100/60">Based in</span>
-                  <span>Pakistan</span>
-                </li>
-                <li className="flex justify-between gap-4 pb-3 border-b border-cream-100/10">
-                  <span className="text-cream-100/60">Available for</span>
-                  <span>Remote roles · Contracts</span>
-                </li>
-                <li className="flex justify-between gap-4 pb-3 border-b border-cream-100/10">
-                  <span className="text-cream-100/60">Years shipping</span>
-                  <span>5+</span>
-                </li>
-                <li className="flex justify-between gap-4 pb-3 border-b border-cream-100/10">
-                  <span className="text-cream-100/60">Specialty</span>
-                  <span>Product Engineer</span>
-                </li>
-                <li className="flex justify-between gap-4">
-                  <span className="text-cream-100/60">Comm style</span>
-                  <span>Async-first</span>
-                </li>
+                {about.quickFacts.items.map((fact, i) => (
+                  <li
+                    key={fact.label}
+                    className={
+                      i < about.quickFacts.items.length - 1
+                        ? "flex justify-between gap-4 pb-3 border-b border-cream-100/10"
+                        : "flex justify-between gap-4"
+                    }
+                  >
+                    <span className="text-cream-100/60">{fact.label}</span>
+                    <span>{fact.value}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
 
           <a
-            href="mailto:mmunibrehman@gmail.com?subject=Project%20inquiry"
+            href={`mailto:${profile.email}?subject=Project%20inquiry`}
             className="group block relative overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#004D35_0%,#00BF7D_100%)] text-white p-8 card-hover"
           >
             <div className="absolute inset-0 dotted-pattern opacity-20" />
             <div className="relative flex items-end justify-between gap-4">
               <div>
                 <p className="font-mono text-xs uppercase tracking-widest text-white/70 mb-2">
-                  Available now · Replies within 24h
+                  {about.ctaContact.eyebrow}
                 </p>
                 <p className="text-2xl leading-tight">
-                  Tell me what you&apos;re building.
+                  {about.ctaContact.line}
                 </p>
               </div>
               <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-white text-accent-600 group-hover:rotate-45 transition-transform flex-shrink-0">
@@ -219,16 +114,16 @@ export default function AboutPage() {
           </a>
 
           <a
-            href="/Muhammad_Muneeb_Resume.docx"
+            href={profile.resumeUrl}
             download
             className="group flex items-center justify-between gap-4 rounded-3xl bg-white border border-ink-900/[0.06] p-6 card-hover"
           >
             <div>
               <p className="font-mono text-xs uppercase tracking-widest text-ink-500 mb-1">
-                Prefer the one-pager?
+                {about.ctaResume.eyebrow}
               </p>
               <p className="text-base text-ink-900 font-medium">
-                Download my resume
+                {about.ctaResume.line}
               </p>
             </div>
             <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-ink-900 text-cream-100 group-hover:bg-accent-500 transition-colors flex-shrink-0">
@@ -242,17 +137,15 @@ export default function AboutPage() {
       <section className="mb-16">
         <div className="mb-8">
           <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-2">
-            / How I work
+            {about.principlesSection.eyebrow}
           </p>
           <h2 className="text-3xl sm:text-4xl text-ink-900">
-            Four{" "}
-            <span className="font-serif italic text-accent-600">commitments</span>{" "}
-            you can hold me to.
+            <RichText segments={about.principlesSection.headingSegments as Segment[]} emClass={accentEm} />
           </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
-          {principles.map((p) => (
+          {about.principles.map((p) => (
             <div
               key={p.n}
               className={`${cardClass} p-7`}
@@ -273,18 +166,16 @@ export default function AboutPage() {
       <section>
         <div className="mb-8">
           <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-2">
-            / Toolkit
+            {about.skillsSection.eyebrow}
           </p>
           <h2 className="text-3xl sm:text-4xl text-ink-900">
-            The stack I{" "}
-            <span className="font-serif italic text-accent-600">reach for</span>{" "}
-            in production.
+            <RichText segments={about.skillsSection.headingSegments as Segment[]} emClass={accentEm} />
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children">
-          {skillGroups.map((group) => {
-            const Icon = group.icon;
+          {about.skillGroups.map((group) => {
+            const Icon = icons[group.icon as keyof typeof icons];
             return (
               <div
                 key={group.title}

@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "intro": [
+      { "text": "Product Engineer who takes web apps from " },
+      { "text": "empty repo", "em": true },
+      { "text": " to " },
+      { "text": "live, monitored production", "em": true },
+      { "text": " — database, APIs, UI, infrastructure, and the CI/CD that keeps it shipping." }
+    ],
+    "ctas": {
+      "hire": "Hire me for a project",
+      "work": "See selected work",
+      "resume": "Download resume"
+    },
+    "badges": [
+      "Pakistan · Remote-ready worldwide",
+      "5+ years in production",
+      "Open to roles & contracts"
+    ]
+  },
+  "terminal": {
+    "path": "~/muneeb",
+    "whoami": "muneeb_ur_rehman",
+    "role": "Product Engineer · Ships end-to-end",
+    "stack": [
+      "laravel · next.js · aws",
+      "postgres · docker · ci-cd"
+    ]
+  },
+  "techStack": {
+    "stacks": [
+      { "name": "TypeScript", "category": "Build" },
+      { "name": "Next.js", "category": "Build" },
+      { "name": "Python", "category": "Build" },
+      { "name": "PostgreSQL", "category": "Data" },
+      { "name": "pgvector", "category": "Data" },
+      { "name": "Claude API", "category": "Data" },
+      { "name": "AWS", "category": "Ship" },
+      { "name": "Cloudflare", "category": "Ship" },
+      { "name": "Docker", "category": "Ship" }
+    ],
+    "caption": [
+      { "text": "From " },
+      { "text": "schema", "em": true },
+      { "text": " to " },
+      { "text": "production", "em": true },
+      { "text": " — one engineer, the full stack, no handoffs lost in translation." }
+    ]
+  },
+  "github": {
+    "stats": [
+      { "value": "40+", "label": "Repos" },
+      { "value": "5y", "label": "Active" },
+      { "value": "∞", "label": "Curiosity", "accent": true }
+    ]
+  },
+  "featured": {
+    "badge": "Currently in production",
+    "title": "FCCMS — a housing-society platform, delivered solo.",
+    "description": "Resident records, maintenance workflows, inventory, and complaint tracking — designed, built, and shipped end-to-end as the sole engineer. Schema, REST APIs, Next.js frontend, deployment, and CI/CD all owned in-house.",
+    "tags": ["Laravel", "Next.js", "TypeScript", "PostgreSQL"],
+    "footer": "Fauji Cement Co. · 2024 → Live"
+  },
+  "ai": {
+    "eyebrow": "AI in production",
+    "subtitle": "Shipped, not demoed",
+    "copy": "LLM-powered features, conversational interfaces, and prompt-engineered workflows — running for real users, not just on a slide.",
+    "providers": [
+      { "name": "OpenAI", "logo": "/openai-icon-logo.svg" },
+      { "name": "Claude", "logo": "/claude-icon-logo.svg" },
+      { "name": "Gemini", "logo": "/gemini-icon-logo.svg" }
+    ]
+  },
+  "devops": {
+    "eyebrow": "Cloud & DevOps",
+    "subtitle": "Owned, not outsourced",
+    "items": [
+      { "label": "AWS EC2", "status": "in stack" },
+      { "label": "Docker", "status": "in stack" },
+      { "label": "Nginx", "status": "in stack" },
+      { "label": "Cloudflare", "status": "in stack" },
+      { "label": "GitHub Actions", "status": "in stack" }
+    ]
+  },
+  "quote": {
+    "eyebrow": "How I think about software",
+    "sentence": [
+      { "text": "Easy to " },
+      { "text": "deploy", "em": true },
+      { "text": ", easy to " },
+      { "text": "maintain", "em": true },
+      { "text": ", and " },
+      { "text": "dependable", "em": true },
+      { "text": " when real users show up." }
+    ]
+  }
+}

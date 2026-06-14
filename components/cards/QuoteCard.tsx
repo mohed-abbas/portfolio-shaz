@@ -1,4 +1,10 @@
+import RichText, { type Segment } from "@/components/RichText";
+import profile from "@/data/profile.json";
+import home from "@/data/home.json";
+
 export default function QuoteCard() {
+  const { eyebrow, sentence } = home.quote;
+
   return (
     <div className="relative overflow-hidden rounded-3xl bg-ink-900 text-cream-100 p-8 col-span-full sm:col-span-2 lg:col-span-8 card-hover">
       <div className="absolute inset-0 dotted-pattern opacity-30" />
@@ -8,21 +14,17 @@ export default function QuoteCard() {
 
       <div className="relative">
         <p className="text-xs uppercase tracking-widest text-cream-100/40 font-mono">
-          How I think about software
+          {eyebrow}
         </p>
 
         <p className="mt-6 text-3xl sm:text-4xl lg:text-5xl leading-tight text-balance">
-          Easy to{" "}
-          <span className="font-serif italic text-accent-400">deploy</span>, easy to{" "}
-          <span className="font-serif italic text-accent-400">maintain</span>, and{" "}
-          <span className="font-serif italic text-accent-400">dependable</span> when
-          real users show up.
+          <RichText segments={sentence as Segment[]} emClass="font-serif italic text-accent-400" />
         </p>
 
         <div className="mt-8 flex items-center gap-4">
           <div className="h-px flex-1 bg-cream-100/15" />
           <span className="font-mono text-xs uppercase tracking-widest text-cream-100/50">
-            — Muneeb
+            — {profile.shortName}
           </span>
         </div>
       </div>

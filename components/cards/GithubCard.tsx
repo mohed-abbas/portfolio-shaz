@@ -1,10 +1,14 @@
 import { Github, ArrowUpRight } from "lucide-react";
 import { cardClass } from "@/components/cards/Card";
+import profile from "@/data/profile.json";
+import home from "@/data/home.json";
 
 export default function GithubCard() {
+  const { stats } = home.github;
+
   return (
     <a
-      href="https://github.com/MMuneeb17"
+      href={profile.github}
       target="_blank"
       rel="noreferrer"
       className={`group ${cardClass} p-7 col-span-full sm:col-span-1 lg:col-span-5 flex flex-col justify-between`}
@@ -18,7 +22,7 @@ export default function GithubCard() {
             <p className="text-xs uppercase tracking-widest text-ink-500 font-mono">
               GitHub
             </p>
-            <p className="font-medium text-ink-900">@MMuneeb17</p>
+            <p className="font-medium text-ink-900">{profile.githubHandle}</p>
           </div>
         </div>
         <ArrowUpRight
@@ -51,18 +55,14 @@ export default function GithubCard() {
       </div>
 
       <div className="mt-6 grid grid-cols-3 gap-3 pt-5 border-t border-ink-900/[0.06]">
-        <div>
-          <p className="text-3xl text-ink-900">40+</p>
-          <p className="text-xs text-ink-500 font-mono mt-1">Repos</p>
-        </div>
-        <div>
-          <p className="text-3xl text-ink-900">5y</p>
-          <p className="text-xs text-ink-500 font-mono mt-1">Active</p>
-        </div>
-        <div>
-          <p className="font-serif text-3xl text-accent-600">∞</p>
-          <p className="text-xs text-ink-500 font-mono mt-1">Curiosity</p>
-        </div>
+        {stats.map((stat) => (
+          <div key={stat.label}>
+            <p className={stat.accent ? "font-serif text-3xl text-accent-600" : "text-3xl text-ink-900"}>
+              {stat.value}
+            </p>
+            <p className="text-xs text-ink-500 font-mono mt-1">{stat.label}</p>
+          </div>
+        ))}
       </div>
     </a>
   );

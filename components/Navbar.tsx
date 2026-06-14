@@ -5,13 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/experience", label: "Experience" },
-];
+import links from "@/data/navigation.json";
+import profile from "@/data/profile.json";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -27,7 +22,7 @@ export default function Navbar() {
         >
           <span className="relative inline-block w-9 h-9">
             <Image
-              src="/muneeb-photo.jpg"
+              src={profile.photo}
               alt="Muneeb Ur Rehman"
               width={72}
               height={72}
@@ -37,7 +32,7 @@ export default function Navbar() {
             <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-accent-500 ring-2 ring-cream-100 animate-shimmer" />
           </span>
           <span className="font-medium text-ink-900 tracking-tight">
-            Muneeb<span className="text-accent-500">.</span>
+            {profile.shortName}<span className="text-accent-500">.</span>
           </span>
         </Link>
 
@@ -67,7 +62,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="mailto:mmunibrehman@gmail.com"
+            href={`mailto:${profile.email}`}
             className="text-sm font-medium px-4 py-2 rounded-full bg-ink-900 text-cream-100 hover:bg-ink-700 transition-colors"
           >
             Get in touch
@@ -108,7 +103,7 @@ export default function Navbar() {
             })}
             <li>
               <a
-                href="mailto:mmunibrehman@gmail.com"
+                href={`mailto:${profile.email}`}
                 className="block mt-2 px-4 py-3 rounded-xl bg-ink-900 text-cream-100 text-sm text-center"
               >
                 Get in touch

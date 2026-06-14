@@ -1,0 +1,149 @@
+{
+  "header": {
+    "eyebrow": "/ About",
+    "headingSegments": [
+      { "text": "A product engineer who " },
+      { "text": "finishes the job", "em": true },
+      { "text": "." }
+    ],
+    "subhead": "Five years building the messy middle between an idea and a system real people rely on — and the receipts to prove it."
+  },
+  "intro": {
+    "leadSegments": [
+      { "text": "I'm " },
+      { "text": "Muneeb", "em": true },
+      { "text": " — a product engineer who turns scoped ideas into running software." }
+    ],
+    "body": [
+      "For the last five years I've been the engineer who takes a project from empty repo to live, monitored production: relational schemas, REST APIs, modern frontends, cloud deployment, and the CI/CD that keeps it shipping. I'm fluent across the stack, but my best work happens in the messy middle — where requirements, edge cases, and real traffic finally meet.",
+      [
+        { "text": "Right now I'm building " },
+        { "text": "FCCMS", "em": true },
+        { "text": " at Fauji Cement — a complete housing-society platform shipped solo — alongside freelance engagements integrating LLMs into production client applications." }
+      ],
+      [
+        { "text": "Independently, I deliver work across Laravel, Next.js, Django, and AI stacks like " },
+        { "text": "OpenAI", "em": true },
+        { "text": ", " },
+        { "text": "Claude", "em": true },
+        { "text": ", and " },
+        { "text": "Gemini", "em": true },
+        { "text": " — for clients who need a single accountable engineer, not a relay team." }
+      ],
+      "Open to senior product-engineering roles and long-term remote contracts. Async-first, written-first, and allergic to dropped handoffs."
+    ]
+  },
+  "quickFacts": {
+    "eyebrow": "Quick facts",
+    "items": [
+      { "label": "Based in", "value": "Pakistan" },
+      { "label": "Available for", "value": "Remote roles · Contracts" },
+      { "label": "Years shipping", "value": "5+" },
+      { "label": "Specialty", "value": "Product Engineer" },
+      { "label": "Comm style", "value": "Async-first" }
+    ]
+  },
+  "ctaContact": {
+    "eyebrow": "Available now · Replies within 24h",
+    "line": "Tell me what you're building."
+  },
+  "ctaResume": {
+    "eyebrow": "Prefer the one-pager?",
+    "line": "Download my resume"
+  },
+  "principlesSection": {
+    "eyebrow": "/ How I work",
+    "headingSegments": [
+      { "text": "Four " },
+      { "text": "commitments", "em": true },
+      { "text": " you can hold me to." }
+    ]
+  },
+  "principles": [
+    {
+      "n": "01",
+      "title": "End-to-end ownership",
+      "body": "One engineer, full accountability — schema, APIs, UI, deployment, and CI/CD. No baton drops between roles."
+    },
+    {
+      "n": "02",
+      "title": "Production-first thinking",
+      "body": "Decisions optimized for the day after launch: easy to deploy, easy to debug, dependable when traffic is real."
+    },
+    {
+      "n": "03",
+      "title": "Async-first communication",
+      "body": "Clear writeups, predictable updates, and clean handoffs. Built for distributed teams and long-term contracts."
+    },
+    {
+      "n": "04",
+      "title": "Five years of shipping",
+      "body": "Enterprise systems, SaaS products, AI integrations, and client work — all delivered to live, paying users."
+    }
+  ],
+  "skillsSection": {
+    "eyebrow": "/ Toolkit",
+    "headingSegments": [
+      { "text": "The stack I " },
+      { "text": "reach for", "em": true },
+      { "text": " in production." }
+    ]
+  },
+  "skillGroups": [
+    {
+      "icon": "Code",
+      "title": "Languages & Frameworks",
+      "items": [
+        "PHP (Laravel)",
+        "JavaScript / TypeScript",
+        "Next.js, React, Vue.js",
+        "Tailwind CSS",
+        "Python (Django)",
+        "C#, ABAP, Bash",
+        "REST API design"
+      ]
+    },
+    {
+      "icon": "Database",
+      "title": "Databases",
+      "items": ["PostgreSQL", "MySQL", "Oracle", "SQL"]
+    },
+    {
+      "icon": "Cloud",
+      "title": "Cloud & DevOps",
+      "items": [
+        "AWS (EC2)",
+        "Docker",
+        "Nginx",
+        "Cloudflare",
+        "Linux / Ubuntu",
+        "Git / GitHub",
+        "CI/CD (Actions, GitLab CI)",
+        "Server administration"
+      ]
+    },
+    {
+      "icon": "Brain",
+      "title": "AI Integration",
+      "items": [
+        "OpenAI",
+        "Anthropic Claude",
+        "Google Gemini",
+        "LLM API integration",
+        "Prompt engineering"
+      ]
+    },
+    {
+      "icon": "Building2",
+      "title": "Enterprise & IT",
+      "items": [
+        "SAP",
+        "ABAP development",
+        "Power BI",
+        "ERP / EMS",
+        "Network troubleshooting",
+        "IT support"
+      ]
+    }
+  ]
+}
