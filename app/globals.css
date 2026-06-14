@@ -28,18 +28,18 @@
   --ink-400: 142 142 134;
   --ink-300: 181 181 173;
 
-  /* Signature mint — accent */
-  --accent-50: 230 249 241;
-  --accent-100: 204 243 228;
-  --accent-200: 153 231 200;
-  --accent-300: 102 219 172;
-  --accent-400: 51 207 144;
-  --accent-500: 0 191 125;
-  --accent-600: 0 153 106;
-  --accent-700: 0 115 80;
-  --accent-800: 0 77 53;
-  --accent-900: 0 38 27;
-  --accent: 0 191 125; /* alias → accent-500 (DEFAULT) */
+  /* Signature coral — accent */
+  --accent-50: 254 242 241;
+  --accent-100: 253 229 227;
+  --accent-200: 250 199 194;
+  --accent-300: 246 160 152;
+  --accent-400: 242 121 110;
+  --accent-500: 239 81 67;
+  --accent-600: 220 41 24;
+  --accent-700: 175 41 29;
+  --accent-800: 135 37 28;
+  --accent-900: 98 31 24;
+  --accent: 239 81 67; /* alias → accent-500 (DEFAULT) */
 
   /* Semantic aliases */
   --background: rgb(var(--cream-100));

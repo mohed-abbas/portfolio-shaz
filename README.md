@@ -1,6 +1,6 @@
 # Muhammad Shahzaib — Portfolio
 
-A premium, light-themed Next.js portfolio for Muhammad Shahzaib, Full-Stack Developer. Inspired by [voxio.fr](https://voxio.fr) with a custom bento-grid layout and the signature accent color **#00BF7D**.
+A premium, light-themed Next.js portfolio for Muhammad Shahzaib, Full-Stack Developer. Inspired by [voxio.fr](https://voxio.fr) with a custom bento-grid layout and the signature accent color **#EF5143**.
 
 ## ✨ Stack
 
@@ -73,8 +73,8 @@ shahzaib-portfolio/
 | Surface       | `white`       | `#FFFFFF` |
 | Foreground    | `ink-900`     | `#0B0B0A` |
 | Muted text    | `ink-500`     | `#6B6B64` |
-| **Accent**    | `accent-500`  | `#00BF7D` |
-| Accent dark   | `accent-600`  | `#00996A` |
+| **Accent**    | `accent-500`  | `#EF5143` |
+| Accent dark   | `accent-600`  | `#DC2918` |
 
 ### Typography
 
@@ -98,7 +98,7 @@ shahzaib-portfolio/
 ## 🛠️ Customization
 
 - Site content lives in `data/*.json` (`profile`, `home`, `about`, `experience`, `projects`, `contact`, `social`, `navigation`); components read from there
-- Brand color is set via Tailwind's `accent-500` token in `tailwind.config.ts`
+- Theme colors (cream, ink, accent) are defined once as RGB-channel CSS variables in `app/globals.css` (`:root`); editing a value there re-themes the whole site. The favicon and OG image render via Satori and can't read CSS variables, so mirror brand-color changes in `lib/brand.ts`
 - Fonts are imported via `next/font/google` in `app/layout.tsx`
 
 ## 📬 Contact

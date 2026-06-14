@@ -12,7 +12,7 @@ const config: Config = {
         "13": "repeat(13, minmax(0, 1fr))",
       },
       colors: {
-        // Light theme palette — warm cream, deep ink, vivid mint.
+        // Light theme palette — warm cream, deep ink, vivid coral.
         // Values resolve to CSS variables defined in app/globals.css (:root),
         // the single source of truth. The <alpha-value> placeholder keeps
         // Tailwind's /opacity modifiers working (e.g. bg-ink-900/[0.06]).
