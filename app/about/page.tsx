@@ -95,7 +95,7 @@ export default function AboutPage() {
 
           <a
             href={`mailto:${profile.email}?subject=Project%20inquiry`}
-            className="group block relative overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#004D35_0%,#00BF7D_100%)] text-white p-8 card-hover"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent-800 to-accent-500 text-white p-8 card-hover"
           >
             <div className="absolute inset-0 dotted-pattern opacity-20" />
             <div className="relative flex items-end justify-between gap-4">

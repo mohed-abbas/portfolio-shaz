@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { brand } from "@/lib/brand";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -15,7 +16,7 @@ export default function OpengraphImage() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          background: "#FAFAF7",
+          background: brand.cream,
           padding: "80px",
         }}
       >
@@ -26,7 +27,7 @@ export default function OpengraphImage() {
             fontWeight: 700,
             letterSpacing: "0.04em",
             textTransform: "uppercase",
-            color: "#00BF7D",
+            color: brand.accent,
           }}
         >
           Full-Stack Developer
@@ -39,7 +40,7 @@ export default function OpengraphImage() {
             fontWeight: 700,
             lineHeight: 1,
             letterSpacing: "-0.03em",
-            color: "#0B0B0A",
+            color: brand.ink,
           }}
         >
           Muhammad Shahzaib
@@ -49,7 +50,7 @@ export default function OpengraphImage() {
             display: "flex",
             marginTop: 32,
             fontSize: 30,
-            color: "#4A4A45",
+            color: brand.inkMuted,
           }}
         >
           Building production SaaS and AI-integrated web apps.

@@ -3,10 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --background: #FAFAF7;
-  --foreground: #0B0B0A;
-  --accent: #00BF7D;
-  --border: rgba(11, 11, 10, 0.08);
+  /* ── Theme: single source of truth ──────────────────────────────────────
+     Every brand color lives here as space-separated RGB channels. Tailwind
+     tokens (bg-accent-500, text-ink-500, border-cream-300, …) and the raw CSS
+     below both read these variables, so changing a value here re-themes the
+     whole site. Channels (not hex) are required for Tailwind's /opacity
+     modifiers via rgb(var(--token) / <alpha-value>).
+     Note: app/icon.tsx and app/opengraph-image.tsx render with Satori and
+     cannot read these — mirror changes in lib/brand.ts. */
+
+  /* Warm cream — backgrounds */
+  --cream-50: 252 252 249;
+  --cream-100: 250 250 247;
+  --cream-200: 244 244 238;
+  --cream-300: 237 237 230;
+  --cream-400: 224 224 216;
+
+  /* Deep ink — foreground + muted text */
+  --ink-900: 11 11 10;
+  --ink-800: 28 28 26;
+  --ink-700: 45 45 42;
+  --ink-600: 74 74 69;
+  --ink-500: 107 107 100;
+  --ink-400: 142 142 134;
+  --ink-300: 181 181 173;
+
+  /* Signature mint — accent */
+  --accent-50: 230 249 241;
+  --accent-100: 204 243 228;
+  --accent-200: 153 231 200;
+  --accent-300: 102 219 172;
+  --accent-400: 51 207 144;
+  --accent-500: 0 191 125;
+  --accent-600: 0 153 106;
+  --accent-700: 0 115 80;
+  --accent-800: 0 77 53;
+  --accent-900: 0 38 27;
+  --accent: 0 191 125; /* alias → accent-500 (DEFAULT) */
+
+  /* Semantic aliases */
+  --background: rgb(var(--cream-100));
+  --foreground: rgb(var(--ink-900));
+  --border: rgb(var(--ink-900) / 0.08);
 }
 
 * {
@@ -26,7 +64,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: var(--accent);
+  background: rgb(var(--accent));
   color: #fff;
 }
 
@@ -39,12 +77,12 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(11, 11, 10, 0.15);
+  background: rgb(var(--ink-900) / 0.15);
   border-radius: 999px;
   border: 2px solid var(--background);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(11, 11, 10, 0.3);
+  background: rgb(var(--ink-900) / 0.3);
 }
 
 /* Custom utilities */
@@ -73,23 +111,23 @@ body {
   }
   .card-hover:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px -12px rgba(11, 11, 10, 0.08);
+    box-shadow: 0 12px 40px -12px rgb(var(--ink-900) / 0.08);
   }
 
   .accent-glow {
-    box-shadow: 0 0 0 1px rgba(0, 191, 125, 0.2),
-                0 8px 32px -8px rgba(0, 191, 125, 0.25);
+    box-shadow: 0 0 0 1px rgb(var(--accent) / 0.2),
+                0 8px 32px -8px rgb(var(--accent) / 0.25);
   }
 
   .dotted-pattern {
-    background-image: radial-gradient(circle, rgba(11, 11, 10, 0.12) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgb(var(--ink-900) / 0.12) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 
   .grid-pattern {
     background-image:
-      linear-gradient(to right, rgba(11, 11, 10, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(11, 11, 10, 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgb(var(--ink-900) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--ink-900) / 0.04) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 }

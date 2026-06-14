@@ -196,7 +196,7 @@ export default function IntroScreen() {
           let content = null;
           if (isExclaimDot) {
             content = (
-              <span className="h-full w-full rounded-full bg-accent-500 animate-blink-hard shadow-[0_0_12px_rgba(0,191,125,0.85)]" />
+              <span className="h-full w-full rounded-full bg-accent-500 animate-blink-hard shadow-[0_0_12px_rgb(var(--accent)/0.85)]" />
             );
           } else if (isCursor && !skip) {
             content = (
@@ -204,7 +204,7 @@ export default function IntroScreen() {
             );
           } else if (isCommitting) {
             content = (
-              <span className="h-full w-full scale-50 rounded-full bg-accent-500 animate-bounce shadow-[0_0_10px_rgba(0,191,125,0.7)]" />
+              <span className="h-full w-full scale-50 rounded-full bg-accent-500 animate-bounce shadow-[0_0_10px_rgb(var(--accent)/0.7)]" />
             );
           } else if (isDrawn) {
             content = (

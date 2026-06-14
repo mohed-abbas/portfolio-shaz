@@ -32,7 +32,7 @@ export default function Navbar() {
             <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-accent-500 ring-2 ring-cream-100 animate-shimmer" />
           </span>
           <span className="font-medium text-ink-900 tracking-tight">
-            {profile.shortName}<span className="text-accent-500">.</span>
+            Shaz<span className="text-accent-500">.</span>
           </span>
         </Link>
 

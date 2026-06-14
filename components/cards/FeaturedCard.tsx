@@ -5,7 +5,7 @@ export default function FeaturedCard() {
   const { badge, title, description, tags, footer } = home.featured;
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#004D35_0%,#00BF7D_100%)] text-white p-7 sm:p-8 col-span-full sm:col-span-1 lg:col-span-7 card-hover">
+    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent-800 to-accent-500 text-white p-7 sm:p-8 col-span-full sm:col-span-1 lg:col-span-7 card-hover">
       {/* Decorative elements */}
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-accent-900/40 to-transparent" />
