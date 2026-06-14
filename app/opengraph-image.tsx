@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Muneeb Ur Rehman — Product Engineer";
+export const alt = "Muhammad Shahzaib — Full-Stack Developer";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -29,7 +29,7 @@ export default function OpengraphImage() {
             color: "#00BF7D",
           }}
         >
-          Product Engineer
+          Full-Stack Developer
         </div>
         <div
           style={{
@@ -42,7 +42,7 @@ export default function OpengraphImage() {
             color: "#0B0B0A",
           }}
         >
-          Muhammad Muneeb Ur Rehman
+          Muhammad Shahzaib
         </div>
         <div
           style={{
@@ -52,7 +52,7 @@ export default function OpengraphImage() {
             color: "#4A4A45",
           }}
         >
-          Building production web applications and cloud-native systems.
+          Building production SaaS and AI-integrated web apps.
         </div>
       </div>
     ),

@@ -1,15 +1,15 @@
 {
-  "fullName": "Muhammad Muneeb Ur Rehman",
+  "fullName": "Muhammad Shahzaib",
   "firstName": "Muhammad",
-  "accentName": "Muneeb",
-  "lastName": "Ur Rehman",
-  "shortName": "Muneeb",
-  "role": "Product Engineer",
-  "email": "mmunibrehman@gmail.com",
-  "resumeUrl": "/Muhammad_Muneeb_Resume.docx",
-  "photo": "/muneeb-photo.jpg",
-  "location": "Pakistan",
-  "github": "https://github.com/MMuneeb17",
-  "githubHandle": "@MMuneeb17",
-  "linkedin": "https://linkedin.com/in/muneeb17"
+  "accentName": "Shahzaib",
+  "lastName": "M.",
+  "shortName": "Shahzaib",
+  "role": "Full-Stack Developer",
+  "email": "hello@example.com",
+  "resumeUrl": "/Muhammad_Shahzaib_Resume.pdf",
+  "photo": "/shahzaib-photo.jpg",
+  "location": "Paris, France",
+  "github": "https://github.com/your-handle",
+  "githubHandle": "@your-handle",
+  "linkedin": "https://www.linkedin.com/in/your-handle"
 }

@@ -1,11 +1,11 @@
 {
   "hero": {
     "intro": [
-      { "text": "Product Engineer who takes web apps from " },
-      { "text": "empty repo", "em": true },
-      { "text": " to " },
-      { "text": "live, monitored production", "em": true },
-      { "text": " — database, APIs, UI, infrastructure, and the CI/CD that keeps it shipping." }
+      { "text": "Full-stack developer building " },
+      { "text": "production SaaS and AI-integrated web apps", "em": true },
+      { "text": " with React, Next.js, Node, and Laravel. I ship working features " },
+      { "text": "from database to deployed UI", "em": true },
+      { "text": "." }
     ],
     "ctas": {
       "hire": "Hire me for a project",
@@ -13,85 +13,85 @@
       "resume": "Download resume"
     },
     "badges": [
-      "Pakistan · Remote-ready worldwide",
-      "5+ years in production",
+      "Paris, France · Remote worldwide",
+      "5+ years shipping",
       "Open to roles & contracts"
     ]
   },
   "terminal": {
-    "path": "~/muneeb",
-    "whoami": "muneeb_ur_rehman",
-    "role": "Product Engineer · Ships end-to-end",
+    "path": "~/shahzaib",
+    "whoami": "muhammad_shahzaib",
+    "role": "Full-Stack Developer · SaaS & AI",
     "stack": [
-      "laravel · next.js · aws",
-      "postgres · docker · ci-cd"
+      "react · next.js · node",
+      "laravel · postgres · docker"
     ]
   },
   "techStack": {
     "stacks": [
-      { "name": "TypeScript", "category": "Build" },
+      { "name": "React", "category": "Build" },
       { "name": "Next.js", "category": "Build" },
-      { "name": "Python", "category": "Build" },
+      { "name": "TypeScript", "category": "Build" },
+      { "name": "Node.js", "category": "Build" },
+      { "name": "Laravel", "category": "Build" },
       { "name": "PostgreSQL", "category": "Data" },
-      { "name": "pgvector", "category": "Data" },
-      { "name": "Claude API", "category": "Data" },
-      { "name": "AWS", "category": "Ship" },
-      { "name": "Cloudflare", "category": "Ship" },
-      { "name": "Docker", "category": "Ship" }
+      { "name": "MySQL", "category": "Data" },
+      { "name": "MongoDB", "category": "Data" },
+      { "name": "Docker", "category": "Ship" },
+      { "name": "CI/CD", "category": "Ship" }
     ],
     "caption": [
       { "text": "From " },
-      { "text": "schema", "em": true },
+      { "text": "database", "em": true },
       { "text": " to " },
-      { "text": "production", "em": true },
-      { "text": " — one engineer, the full stack, no handoffs lost in translation." }
+      { "text": "deployed UI", "em": true },
+      { "text": ", one developer owns the build. No handoffs lost in translation." }
     ]
   },
   "github": {
     "stats": [
-      { "value": "40+", "label": "Repos" },
-      { "value": "5y", "label": "Active" },
+      { "value": "5+", "label": "Yrs building" },
+      { "value": "4", "label": "Live builds" },
       { "value": "∞", "label": "Curiosity", "accent": true }
     ]
   },
   "featured": {
-    "badge": "Currently in production",
-    "title": "FCCMS — a housing-society platform, delivered solo.",
-    "description": "Resident records, maintenance workflows, inventory, and complaint tracking — designed, built, and shipped end-to-end as the sole engineer. Schema, REST APIs, Next.js frontend, deployment, and CI/CD all owned in-house.",
-    "tags": ["Laravel", "Next.js", "TypeScript", "PostgreSQL"],
-    "footer": "Fauji Cement Co. · 2024 → Live"
+    "badge": "Featured build",
+    "title": "Tasktrox: a full-stack project-management SaaS.",
+    "description": "A Next.js + Node platform for organizing tasks, projects, and teams. Built end to end: data model, REST APIs, dashboard UI, and the deployment that keeps it running.",
+    "tags": ["Next.js", "Node.js", "TypeScript", "PostgreSQL"],
+    "footer": "SaaS Product · Published"
   },
   "ai": {
     "eyebrow": "AI in production",
     "subtitle": "Shipped, not demoed",
-    "copy": "LLM-powered features, conversational interfaces, and prompt-engineered workflows — running for real users, not just on a slide.",
+    "copy": "LLM features built on OpenAI and Anthropic: chatbots, content generation, and document processing running for real users.",
     "providers": [
       { "name": "OpenAI", "logo": "/openai-icon-logo.svg" },
-      { "name": "Claude", "logo": "/claude-icon-logo.svg" },
-      { "name": "Gemini", "logo": "/gemini-icon-logo.svg" }
+      { "name": "Claude", "logo": "/claude-icon-logo.svg" }
     ]
   },
   "devops": {
     "eyebrow": "Cloud & DevOps",
     "subtitle": "Owned, not outsourced",
     "items": [
-      { "label": "AWS EC2", "status": "in stack" },
       { "label": "Docker", "status": "in stack" },
-      { "label": "Nginx", "status": "in stack" },
-      { "label": "Cloudflare", "status": "in stack" },
-      { "label": "GitHub Actions", "status": "in stack" }
+      { "label": "CI/CD", "status": "in stack" },
+      { "label": "Blue/Green deploys", "status": "in stack" },
+      { "label": "Sentry", "status": "in stack" },
+      { "label": "Umami", "status": "in stack" }
     ]
   },
   "quote": {
-    "eyebrow": "How I think about software",
+    "eyebrow": "How I work",
     "sentence": [
-      { "text": "Easy to " },
-      { "text": "deploy", "em": true },
-      { "text": ", easy to " },
-      { "text": "maintain", "em": true },
-      { "text": ", and " },
-      { "text": "dependable", "em": true },
-      { "text": " when real users show up." }
+      { "text": "Clear " },
+      { "text": "communication", "em": true },
+      { "text": ", clean " },
+      { "text": "code", "em": true },
+      { "text": ", and software that " },
+      { "text": "ships on schedule", "em": true },
+      { "text": "." }
     ]
   }
 }

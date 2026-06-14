@@ -7,9 +7,9 @@ import profile from "@/data/profile.json";
 import about from "@/data/about.json";
 
 export const metadata: Metadata = {
-  title: "About — Muneeb Ur Rehman",
+  title: "About — Muhammad Shahzaib",
   description:
-    "Muhammad Muneeb Ur Rehman is a product and full-stack engineer who takes scoped ideas from empty repo to live, monitored production — schema, APIs, UI, and CI/CD owned end-to-end.",
+    "Muhammad Shahzaib is a full-stack developer in Paris building production SaaS and AI-integrated web apps with React, Next.js, Node, and Laravel, owned from database to deployed UI.",
 };
 
 const icons = { Code, Database, Cloud, Brain, Building2 };
@@ -37,7 +37,7 @@ export default function AboutPage() {
           <div className="absolute -inset-3 bg-accent-500/10 rounded-full blur-2xl" aria-hidden />
           <Image
             src={profile.photo}
-            alt="Muneeb Ur Rehman"
+            alt={profile.fullName}
             width={320}
             height={320}
             priority

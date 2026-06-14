@@ -16,8 +16,8 @@ export default function HeroCard() {
 
       <div className="relative">
         <h1 className="text-display-lg text-ink-900 text-balance">
-          {profile.firstName} <span className="font-serif italic text-accent-600">{profile.accentName}</span> <br />
-          {profile.lastName}
+          {profile.firstName} <br />
+          <span className="font-serif italic text-accent-600">{profile.accentName}</span> {profile.lastName}
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-ink-600 max-w-2xl leading-relaxed text-balance">

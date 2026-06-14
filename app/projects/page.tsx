@@ -6,9 +6,9 @@ import profile from "@/data/profile.json";
 import projectsData from "@/data/projects.json";
 
 export const metadata: Metadata = {
-  title: "Projects — Muneeb Ur Rehman",
+  title: "Projects — Muhammad Shahzaib",
   description:
-    "Featured engineering work by Muhammad Muneeb Ur Rehman — enterprise platforms, multi-tenant SaaS, AI integrations, and client engagements, every one live or delivered.",
+    "Selected work by Muhammad Shahzaib: full-stack SaaS, a travel booking platform, an AI recruitment platform, and a healthcare front-end. Every project published and in use.",
 };
 
 const projects: Project[] = projectsData.projects;

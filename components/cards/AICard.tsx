@@ -24,7 +24,7 @@ export default function AICard() {
         {copy}
       </p>
 
-      <div className="mt-6 grid grid-cols-3 gap-2">
+      <div className="mt-6 grid grid-cols-2 gap-2">
         {providers.map((p) => (
           <div
             key={p.name}

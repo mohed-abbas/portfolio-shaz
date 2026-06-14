@@ -1,6 +1,6 @@
-# Muneeb Ur Rehman — Portfolio
+# Muhammad Shahzaib — Portfolio
 
-A premium, light-themed Next.js portfolio for Muhammad Muneeb Ur Rehman, Full-Stack & DevOps Engineer. Inspired by [voxio.fr](https://voxio.fr) with a custom bento-grid layout and the signature accent color **#00BF7D**.
+A premium, light-themed Next.js portfolio for Muhammad Shahzaib, Full-Stack Developer. Inspired by [voxio.fr](https://voxio.fr) with a custom bento-grid layout and the signature accent color **#00BF7D**.
 
 ## ✨ Stack
 
@@ -36,7 +36,7 @@ npm run dev
 ## 📂 Project structure
 
 ```
-muneeb-portfolio/
+shahzaib-portfolio/
 ├── app/
 │   ├── layout.tsx        # Root layout, fonts, metadata
 │   ├── page.tsx          # Home — bento grid
@@ -97,11 +97,11 @@ muneeb-portfolio/
 
 ## 🛠️ Customization
 
-- Personal info lives in `components/cards/*.tsx`, `app/projects/page.tsx`, and `app/experience/page.tsx`
+- Site content lives in `data/*.json` (`profile`, `home`, `about`, `experience`, `projects`, `contact`, `social`, `navigation`); components read from there
 - Brand color is set via Tailwind's `accent-500` token in `tailwind.config.ts`
 - Fonts are imported via `next/font/google` in `app/layout.tsx`
 
 ## 📬 Contact
 
-**Muhammad Muneeb Ur Rehman**
-mmunibrehman@gmail.com · [LinkedIn](https://linkedin.com/in/muneeb17) · [GitHub](https://github.com/MMuneeb17)
+**Muhammad Shahzaib** — Full-Stack Developer, Paris, France
+Contact details are configured in `data/profile.json` and `data/social.json`.

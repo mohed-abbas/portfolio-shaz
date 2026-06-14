@@ -2,85 +2,145 @@
   "page": {
     "eyebrow": "/ Experience · 5+ years",
     "heading": [
-      { "text": "PHP intern to " },
-      { "text": "end-to-end owner", "em": true },
-      { "text": " — on the same trajectory ever since." }
+      { "text": "Front-end intern to " },
+      { "text": "full-stack developer", "em": true },
+      { "text": ", building across the stack for five years." }
     ],
-    "subhead": "Five years of production engineering across enterprise systems, SaaS, and freelance work — promoted on output, retained on reliability, and still shipping every week.",
+    "subhead": "Five years of production work across SaaS, e-learning platforms, and client apps. Promoted on output, retained on reliability, and still shipping.",
     "education": {
       "eyebrow": "Credentials",
       "heading": "Education"
+    },
+    "certifications": {
+      "eyebrow": "Credentials",
+      "heading": "Certifications"
     }
   },
   "experiences": [
     {
-      "company": "Fauji Cement Company Limited",
-      "role": "Management Trainee Officer",
-      "period": "Nov 2024 — Present",
-      "location": "On-site · Pakistan",
-      "type": "Full-time",
-      "bullets": [
-        "Designed, built, and shipped FCCMS (Fauji Cement Colony Management System) solo — a housing-society platform now live and used daily for resident records, maintenance workflows, inventory, and complaint tracking.",
-        "Owned the full delivery chain: PostgreSQL schema, Laravel REST APIs, Next.js + TypeScript frontend, AWS deployment, and CI/CD.",
-        "Cut hours from daily IT operations with Python automation — a network scanner and a remote installer that rolls out endpoint software across the corporate network.",
-        "Acted as a force-multiplier for the IT function across EMS, ERP, networking, and on-site hardware support."
-      ],
-      "stack": ["Laravel", "Next.js", "TypeScript", "Python", "PostgreSQL"],
-      "current": true
-    },
-    {
-      "company": "Capregsoft",
-      "role": "Software Engineer",
-      "period": "Jun 2022 — Sep 2024",
-      "location": "Hybrid",
-      "type": "Full-time",
-      "bullets": [
-        "Shipped multiple full-stack web products across the SDLC — relational schemas, Laravel and Django REST APIs, and React/Next.js frontends — for paying customers.",
-        "Worked inside an agile team: Git-based reviews, sprint planning, and a strong feedback culture that kept release velocity high without breaking trunk.",
-        "Tightened performance, hardened deploys, and matured CI/CD pipelines alongside product, design, and QA stakeholders."
-      ],
-      "stack": ["Laravel", "Django", "React", "Next.js", "MySQL", "PostgreSQL"]
-    },
-    {
-      "company": "Freelance · Devlin Solutions",
-      "role": "Product Engineer",
-      "period": "Jan 2021 — Present",
+      "company": "Freelance · Upwork",
+      "role": "Full-Stack Developer",
+      "period": "2020 — Present",
       "location": "Remote · Worldwide",
       "type": "Independent",
       "bullets": [
-        "Delivered end-to-end web products for international and local clients via Upwork, Fiverr, and direct engagements — a track record of repeat hires and long retention.",
-        "Built typed Next.js/React frontends, Laravel and Django APIs, schema design, cloud deployment, and the ongoing maintenance work that keeps the bills paid post-launch.",
-        "Executed scoped contract engagements (incl. with Panther Tech) — feature builds, targeted refactors, and bug fixes shipped on tight timelines.",
-        "Embedded production-grade AI into client products with OpenAI, Anthropic Claude, and Google Gemini — measurable workflow features, not chatbot demos."
+        "Built and shipped full-stack web products for international clients: SaaS dashboards, booking platforms with payments, and conversion-focused marketing front-ends.",
+        "Held a 100% Job Success score across long-running engagements, with repeat hires and 1,400+ tracked hours.",
+        "Added production AI features to client apps with the OpenAI and Anthropic APIs: chatbots, content generation, and document processing.",
+        "Owned each build end to end: data model, REST APIs, typed React/Next.js frontends, and deployment."
       ],
-      "stack": ["Next.js", "Laravel", "Django", "AWS", "OpenAI", "Claude"],
+      "stack": ["Next.js", "Node.js", "Laravel", "TypeScript", "OpenAI"],
+      "current": true,
       "accent": true
     },
     {
-      "company": "Linknb1t",
-      "role": "Software Engineer",
-      "period": "Aug 2020 — Mar 2022",
-      "location": "On-site",
+      "company": "LMS Factory",
+      "role": "Full-Stack Developer",
+      "period": "Apr 2021 — Jun 2026",
+      "location": "Remote · France",
       "type": "Full-time",
       "bullets": [
-        "Joined as a PHP intern and promoted to Software Engineer inside the first month — picked up the codebase and started shipping features alongside seniors.",
-        "Built and maintained Laravel applications on MySQL — owned features from ticket to release.",
-        "Shipped real-time interfaces with Laravel Livewire and AJAX, including dashboards and operations tools used daily by internal teams."
+        "Developed custom Moodle plugins across types: activity, local, block, authentication, and theme.",
+        "Built and maintained the platform's custom Moodle theme in PHP, CSS, and JavaScript.",
+        "Integrated external web services and APIs, and automated operations with scheduled CRON tasks.",
+        "Designed the MySQL data architecture and wrote complex SQL for reporting and data operations."
       ],
-      "stack": ["Laravel", "Livewire", "MySQL", "AJAX"]
+      "stack": ["PHP", "Moodle", "MySQL", "JavaScript", "CSS"]
+    },
+    {
+      "company": "Intelli Quarck",
+      "role": "Freelance React Developer",
+      "period": "Aug 2023 — Jun 2024",
+      "location": "Remote",
+      "type": "Freelance",
+      "bullets": [
+        "Led frontend development with React, TypeScript, Next.js, and Tailwind CSS.",
+        "Built secure authentication and validation flows with React and Redux Saga.",
+        "Created design-accurate UI components with Shadcn UI and Ant Design.",
+        "Integrated APIs with Redux Saga for clean state management and performance."
+      ],
+      "stack": ["React", "Next.js", "TypeScript", "Redux Saga", "Tailwind CSS"]
+    },
+    {
+      "company": "Cintaxedge",
+      "role": "Freelance React / React Native Developer",
+      "period": "Aug 2021 — Dec 2021",
+      "location": "Remote",
+      "type": "Freelance",
+      "bullets": [
+        "Built and improved production apps with React and React Native in an agile team.",
+        "Supervised a small frontend team and reviewed pull requests across the project.",
+        "Rewrote business logic and structure for better performance and readability.",
+        "Translated designs and wireframes into maintainable, high-quality code."
+      ],
+      "stack": ["React", "React Native", "Expo", "Firebase", "JavaScript"]
+    },
+    {
+      "company": "CIAGE",
+      "role": "Front-End Developer",
+      "period": "Feb 2020 — Mar 2020",
+      "location": "On-site · France",
+      "type": "Internship",
+      "bullets": [
+        "Built front-end websites with Bootstrap and JavaScript.",
+        "Created reusable components for future projects.",
+        "Contributed to the company intranet."
+      ],
+      "stack": ["JavaScript", "Bootstrap", "HTML", "CSS"]
     }
   ],
   "education": [
     {
-      "school": "COMSATS University Islamabad",
-      "degree": "Bachelor of Science in Computer Science",
-      "period": "Sep 2018 — Jun 2023"
+      "school": "ESGI — École Supérieure de Génie Informatique, Paris",
+      "degree": "Master's degree, Web Engineering",
+      "period": "2024 — 2026"
     },
     {
-      "school": "Amal Academy (Stanford-funded)",
-      "degree": "Career-Prep Fellow",
-      "period": "Dec 2021 — Feb 2022",
-      "note": "Selected from 4,500+ applicants for a 150-hour Stanford-funded program in communication, leadership, and structured problem-solving."
+      "school": "ESGI — École Supérieure de Génie Informatique, Paris",
+      "degree": "Bachelor's degree, Web Engineering",
+      "period": "2023 — 2024"
+    },
+    {
+      "school": "WebForce3, Les Mureaux",
+      "degree": "Web & Mobile Development (Bac+2, RNCP Level 5)",
+      "period": "2019 — 2020"
+    },
+    {
+      "school": "École de la Deuxième Chance, Magnanville",
+      "degree": "Foundation — IT & French Language",
+      "period": "2018 — 2019"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Expert en Ingénierie Informatique",
+      "issuer": "ESGI — École Supérieure de Génie Informatique",
+      "year": "2026"
+    },
+    {
+      "name": "Expert en Ingénierie du Développement et en Architecture Logicielle",
+      "issuer": "ESGI — École Supérieure de Génie Informatique",
+      "year": "2026"
+    },
+    {
+      "name": "Application & Software Solutions Developer (RNCP Level 6)",
+      "issuer": "ESGI — École Supérieure de Génie Informatique",
+      "year": "2024"
+    },
+    {
+      "name": "French Language Program",
+      "issuer": "CAVILAM — Alliance Française",
+      "year": "2023"
+    },
+    {
+      "name": "Web Integration Techniques",
+      "issuer": "WebForce3",
+      "year": "2020"
+    },
+    {
+      "name": "Web & Web Mobile Developer (RNCP Level 5)",
+      "issuer": "WebForce3",
+      "year": "2020"
     }
   ]
 }

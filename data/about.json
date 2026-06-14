@@ -2,45 +2,41 @@
   "header": {
     "eyebrow": "/ About",
     "headingSegments": [
-      { "text": "A product engineer who " },
-      { "text": "finishes the job", "em": true },
+      { "text": "A full-stack developer who " },
+      { "text": "ships", "em": true },
       { "text": "." }
     ],
-    "subhead": "Five years building the messy middle between an idea and a system real people rely on — and the receipts to prove it."
+    "subhead": "Five years building production SaaS, booking platforms, and AI-integrated web apps. From database to deployed UI, owned end to end."
   },
   "intro": {
     "leadSegments": [
       { "text": "I'm " },
-      { "text": "Muneeb", "em": true },
-      { "text": " — a product engineer who turns scoped ideas into running software." }
+      { "text": "Shahzaib", "em": true },
+      { "text": ", a full-stack developer who turns ideas into running software." }
     ],
     "body": [
-      "For the last five years I've been the engineer who takes a project from empty repo to live, monitored production: relational schemas, REST APIs, modern frontends, cloud deployment, and the CI/CD that keeps it shipping. I'm fluent across the stack, but my best work happens in the messy middle — where requirements, edge cases, and real traffic finally meet.",
+      "For the past five years I've built and maintained complex web applications end to end: project-management dashboards, booking platforms with payments and admin panels, and clean marketing front-ends that convert. Across the stack I work with React, Next.js, Node.js, Laravel, TypeScript, and PostgreSQL.",
       [
-        { "text": "Right now I'm building " },
-        { "text": "FCCMS", "em": true },
-        { "text": " at Fauji Cement — a complete housing-society platform shipped solo — alongside freelance engagements integrating LLMs into production client applications." }
-      ],
-      [
-        { "text": "Independently, I deliver work across Laravel, Next.js, Django, and AI stacks like " },
+        { "text": "I help startups and businesses ship real, working features: SaaS MVPs, " },
+        { "text": "AI integrations", "em": true },
+        { "text": " on the " },
         { "text": "OpenAI", "em": true },
-        { "text": ", " },
-        { "text": "Claude", "em": true },
-        { "text": ", and " },
-        { "text": "Gemini", "em": true },
-        { "text": " — for clients who need a single accountable engineer, not a relay team." }
+        { "text": " and " },
+        { "text": "Anthropic", "em": true },
+        { "text": " APIs, and full-stack builds owned from database to deployment." }
       ],
-      "Open to senior product-engineering roles and long-term remote contracts. Async-first, written-first, and allergic to dropped handoffs."
+      "Based in Paris and fluent in English and French, I work async-first with clear updates and clean, maintainable code. You get a developer who asks the right questions before writing a line.",
+      "Open to full-stack roles and long-term remote contracts. If you're building a SaaS MVP or need AI features in an existing product, send me a message."
     ]
   },
   "quickFacts": {
     "eyebrow": "Quick facts",
     "items": [
-      { "label": "Based in", "value": "Pakistan" },
+      { "label": "Based in", "value": "Paris, France" },
       { "label": "Available for", "value": "Remote roles · Contracts" },
       { "label": "Years shipping", "value": "5+" },
-      { "label": "Specialty", "value": "Product Engineer" },
-      { "label": "Comm style", "value": "Async-first" }
+      { "label": "Languages", "value": "English · French" },
+      { "label": "Job success", "value": "100%" }
     ]
   },
   "ctaContact": {
@@ -63,22 +59,22 @@
     {
       "n": "01",
       "title": "End-to-end ownership",
-      "body": "One engineer, full accountability — schema, APIs, UI, deployment, and CI/CD. No baton drops between roles."
+      "body": "One developer from data model to deployed UI. Schema, APIs, frontend, and the pipeline that ships it."
     },
     {
       "n": "02",
-      "title": "Production-first thinking",
-      "body": "Decisions optimized for the day after launch: easy to deploy, easy to debug, dependable when traffic is real."
+      "title": "Clean, maintainable code",
+      "body": "Code the next developer can read. Clear structure, sensible names, and a build that survives handoff."
     },
     {
       "n": "03",
-      "title": "Async-first communication",
-      "body": "Clear writeups, predictable updates, and clean handoffs. Built for distributed teams and long-term contracts."
+      "title": "Clear communication",
+      "body": "Regular progress updates and the right questions asked before a line gets written. Async-first, written-first."
     },
     {
       "n": "04",
-      "title": "Five years of shipping",
-      "body": "Enterprise systems, SaaS products, AI integrations, and client work — all delivered to live, paying users."
+      "title": "Shipped on schedule",
+      "body": "Five years of delivering working features to real users, on the timeline we agreed."
     }
   ],
   "skillsSection": {
@@ -92,35 +88,30 @@
   "skillGroups": [
     {
       "icon": "Code",
-      "title": "Languages & Frameworks",
+      "title": "Frontend",
       "items": [
-        "PHP (Laravel)",
-        "JavaScript / TypeScript",
-        "Next.js, React, Vue.js",
+        "React",
+        "Next.js",
+        "TypeScript",
         "Tailwind CSS",
-        "Python (Django)",
-        "C#, ABAP, Bash",
+        "GSAP",
+        "Vue.js"
+      ]
+    },
+    {
+      "icon": "Building2",
+      "title": "Backend",
+      "items": [
+        "Node.js",
+        "Express",
+        "Laravel (PHP)",
         "REST API design"
       ]
     },
     {
       "icon": "Database",
       "title": "Databases",
-      "items": ["PostgreSQL", "MySQL", "Oracle", "SQL"]
-    },
-    {
-      "icon": "Cloud",
-      "title": "Cloud & DevOps",
-      "items": [
-        "AWS (EC2)",
-        "Docker",
-        "Nginx",
-        "Cloudflare",
-        "Linux / Ubuntu",
-        "Git / GitHub",
-        "CI/CD (Actions, GitLab CI)",
-        "Server administration"
-      ]
+      "items": ["PostgreSQL", "MySQL", "MongoDB", "Firebase"]
     },
     {
       "icon": "Brain",
@@ -128,21 +119,21 @@
       "items": [
         "OpenAI",
         "Anthropic Claude",
-        "Google Gemini",
-        "LLM API integration",
-        "Prompt engineering"
+        "Chatbots",
+        "Content generation",
+        "Document processing"
       ]
     },
     {
-      "icon": "Building2",
-      "title": "Enterprise & IT",
+      "icon": "Cloud",
+      "title": "DevOps & Infra",
       "items": [
-        "SAP",
-        "ABAP development",
-        "Power BI",
-        "ERP / EMS",
-        "Network troubleshooting",
-        "IT support"
+        "Docker",
+        "CI/CD",
+        "Blue/Green deploys",
+        "Sentry",
+        "GlitchTip",
+        "Umami"
       ]
     }
   ]

@@ -27,33 +27,37 @@ const handlee = Handlee({
 });
 
 // Update to the real production domain once deployed.
-const siteUrl = "https://muneeb-portfolio.vercel.app";
+const siteUrl = "https://shahzaib-portfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Muneeb Ur Rehman — Product Engineer",
+  title: "Muhammad Shahzaib — Full-Stack Developer",
   description:
-    "Muhammad Muneeb Ur Rehman — Product Engineer based in Pakistan. Building production web applications with Laravel, Next.js, and cloud-native infrastructure.",
+    "Muhammad Shahzaib — Full-Stack Developer based in Paris. Building production SaaS and AI-integrated web apps with React, Next.js, Node, and Laravel.",
   keywords: [
-    "Muneeb Ur Rehman",
-    "Product Engineer",
-    "Laravel",
+    "Muhammad Shahzaib",
+    "Full-Stack Developer",
+    "React",
     "Next.js",
+    "Node.js",
+    "Laravel",
+    "SaaS",
+    "AI Integration",
     "Portfolio",
   ],
-  authors: [{ name: "Muhammad Muneeb Ur Rehman" }],
+  authors: [{ name: "Muhammad Shahzaib" }],
   openGraph: {
-    title: "Muneeb Ur Rehman — Product Engineer",
+    title: "Muhammad Shahzaib — Full-Stack Developer",
     description:
-      "Building production web applications and cloud-native systems.",
+      "Building production SaaS and AI-integrated web apps from database to deployed UI.",
     type: "website",
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muneeb Ur Rehman — Product Engineer",
+    title: "Muhammad Shahzaib — Full-Stack Developer",
     description:
-      "Building production web applications and cloud-native systems.",
+      "Building production SaaS and AI-integrated web apps from database to deployed UI.",
   },
 };
 

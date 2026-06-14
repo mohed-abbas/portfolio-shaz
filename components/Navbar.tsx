@@ -23,7 +23,7 @@ export default function Navbar() {
           <span className="relative inline-block w-9 h-9">
             <Image
               src={profile.photo}
-              alt="Muneeb Ur Rehman"
+              alt={profile.fullName}
               width={72}
               height={72}
               priority

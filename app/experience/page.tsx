@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Briefcase, GraduationCap, Award } from "lucide-react";
+import { Briefcase, GraduationCap, Award, BadgeCheck } from "lucide-react";
 import { cardClass } from "@/components/cards/Card";
 import RichText, { type Segment } from "@/components/RichText";
 import experienceData from "@/data/experience.json";
 
 export const metadata: Metadata = {
-  title: "Experience — Muneeb Ur Rehman",
+  title: "Experience — Muhammad Shahzaib",
   description:
-    "Five years of production engineering by Muhammad Muneeb Ur Rehman — across enterprise systems, SaaS, and freelance work, from PHP intern to end-to-end owner.",
+    "Five years of production work by Muhammad Shahzaib across SaaS, e-learning platforms, and client apps, from front-end intern to full-stack developer.",
 };
 
 type Experience = {
@@ -29,8 +29,15 @@ type Education = {
   note?: string;
 };
 
+type Certification = {
+  name: string;
+  issuer: string;
+  year: string;
+};
+
 const experiences: Experience[] = experienceData.experiences;
 const education: Education[] = experienceData.education;
+const certifications: Certification[] = experienceData.certifications;
 const { page } = experienceData;
 
 export default function ExperiencePage() {
@@ -172,6 +179,47 @@ export default function ExperiencePage() {
                       {ed.note}
                     </p>
                   )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="mt-20">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-9 h-9 rounded-2xl bg-ink-900 text-cream-100 flex items-center justify-center">
+            <BadgeCheck size={16} />
+          </div>
+          <div>
+            <p className="text-xs font-mono uppercase tracking-widest text-ink-500">
+              {page.certifications.eyebrow}
+            </p>
+            <h2 className="text-3xl text-ink-900">
+              {page.certifications.heading}
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {certifications.map((cert) => (
+            <article
+              key={cert.name}
+              className={`${cardClass} p-7`}
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-2xl bg-accent-500/10 text-accent-600 flex items-center justify-center flex-shrink-0">
+                  <Award size={18} />
+                </div>
+                <div className="flex-1">
+                  <p className="font-mono text-xs text-ink-500 uppercase tracking-widest">
+                    {cert.year}
+                  </p>
+                  <h3 className="mt-1 text-lg text-ink-900 leading-snug">
+                    {cert.name}
+                  </h3>
+                  <p className="mt-1 text-ink-600">{cert.issuer}</p>
                 </div>
               </div>
             </article>
