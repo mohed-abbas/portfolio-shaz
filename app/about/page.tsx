@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const icons = { Code, Database, Cloud, Brain, Building2 };
 
-const accentEm = "font-serif italic text-accent-600";
+const accentEm = "accent-em";
 const boldEm = "text-content font-medium";
 
 export default function AboutPage() {

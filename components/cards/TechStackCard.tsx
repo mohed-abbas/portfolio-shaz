@@ -50,7 +50,7 @@ export default function TechStackCard() {
 
       <div className="p-6 sm:p-7 pt-3">
         <p className="text-2xl text-content leading-snug">
-          <RichText segments={caption as Segment[]} emClass="font-serif italic text-accent-600" />
+          <RichText segments={caption as Segment[]} emClass="accent-em" />
         </p>
       </div>
 

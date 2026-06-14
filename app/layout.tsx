@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
-import { Ubuntu, Ubuntu_Mono, Handlee } from "next/font/google";
+import { Hanken_Grotesk, IBM_Plex_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GetInTouchModal from "@/components/GetInTouchModal";
 
-const ubuntu = Ubuntu({
-  variable: "--font-ubuntu",
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
   display: "swap",
 });
 
-const ubuntuMono = Ubuntu_Mono({
-  variable: "--font-ubuntu-mono",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
 });
 
-const handlee = Handlee({
-  variable: "--font-handlee",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   weight: ["400"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -77,7 +78,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${ubuntu.variable} ${ubuntuMono.variable} ${handlee.variable} font-sans bg-base text-content antialiased min-h-screen flex flex-col`}
+        className={`${hanken.variable} ${plexMono.variable} ${fraunces.variable} font-sans bg-base text-content antialiased min-h-screen flex flex-col`}
       >
         <div className="fixed inset-0 -z-10 grain-overlay opacity-100 pointer-events-none" />
         <Navbar />

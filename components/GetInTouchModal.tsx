@@ -111,7 +111,7 @@ export default function GetInTouchModal() {
           className="mt-2 text-2xl sm:text-3xl text-content leading-tight"
         >
           {contact.title.before}
-          <span className="font-serif italic text-accent-600">
+          <span className="accent-em">
             {contact.title.accent}
           </span>
           {contact.title.after}

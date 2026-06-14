@@ -28,7 +28,7 @@ export default function ProjectsPage() {
             <h1 className="text-display-md text-content max-w-3xl text-balance">
               <RichText
                 segments={page.heading as Segment[]}
-                emClass="font-serif italic text-accent-600"
+                emClass="accent-em"
               />
             </h1>
             <p className="mt-5 text-lg text-content-muted max-w-2xl">
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
           <p className="text-3xl sm:text-5xl max-w-2xl mx-auto text-balance leading-tight">
             <RichText
               segments={page.cta.line as Segment[]}
-              emClass="font-serif italic text-accent-400"
+              emClass="accent-em"
             />
           </p>
           <p className="mt-5 text-content-muted max-w-xl mx-auto leading-relaxed">

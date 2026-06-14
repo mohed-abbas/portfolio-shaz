@@ -18,7 +18,7 @@ export default function QuoteCard() {
         </p>
 
         <p className="mt-6 text-3xl sm:text-4xl lg:text-5xl leading-tight text-balance">
-          <RichText segments={sentence as Segment[]} emClass="font-serif italic text-accent-400" />
+          <RichText segments={sentence as Segment[]} emClass="accent-em" />
         </p>
 
         <div className="mt-8 flex items-center gap-4">

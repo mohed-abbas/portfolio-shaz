@@ -64,9 +64,9 @@ const config: Config = {
         "on-inverse": "rgb(var(--on-inverse) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ["var(--font-ubuntu)", "system-ui", "sans-serif"],
-        serif: ["var(--font-handlee)", "Georgia", "serif"],
-        mono: ["var(--font-ubuntu-mono)", "ui-monospace", "monospace"],
+        sans: ["var(--font-hanken)", "system-ui", "sans-serif"],
+        serif: ["var(--font-fraunces)", "Georgia", "serif"],
+        mono: ["var(--font-plex-mono)", "ui-monospace", "monospace"],
       },
       fontSize: {
         "display-xl": ["clamp(3.5rem, 8vw, 7rem)", { lineHeight: "0.9", letterSpacing: "-0.04em" }],

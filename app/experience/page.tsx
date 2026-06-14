@@ -51,7 +51,7 @@ export default function ExperiencePage() {
         <h1 className="text-display-md text-content max-w-3xl text-balance">
           <RichText
             segments={page.heading as Segment[]}
-            emClass="font-serif italic text-accent-600"
+            emClass="accent-em"
           />
         </h1>
         <p className="mt-5 text-lg text-content-muted max-w-2xl">

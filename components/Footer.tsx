@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="md:col-span-5">
             <p className="text-4xl text-content leading-tight">
               Let&apos;s build something <br />
-              <span className="font-serif italic text-accent-500">that stays up.</span>
+              <span className="accent-em">that stays up.</span>
             </p>
             <p className="mt-4 text-content-muted max-w-md">
               Open to senior full-stack roles and long-term remote

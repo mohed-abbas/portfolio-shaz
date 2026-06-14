@@ -132,6 +132,15 @@ body {
     text-wrap: balance;
   }
 
+  /* Emphasized accent words: white text on an accent highlight (marker style).
+     Single source for every italic accent run; box-decoration-clone keeps the
+     highlight intact when the run wraps across lines. */
+  .accent-em {
+    @apply font-serif italic text-white bg-accent-500 rounded px-1.5 py-0.5;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
   .grain-overlay {
     position: relative;
   }

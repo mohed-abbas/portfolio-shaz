@@ -7,7 +7,7 @@ A premium, light-themed Next.js portfolio for Muhammad Shahzaib, Full-Stack Deve
 - **Next.js 14** (App Router)
 - **TypeScript**
 - **Tailwind CSS** (custom palette + animations)
-- **Ubuntu** (sans + mono) and **Handlee** via `next/font/google`
+- **Hanken Grotesk** (sans), **IBM Plex Mono** (mono), and **Fraunces** (serif accent) via `next/font/google`
 - **Lucide React** icons
 - **Pen-trace intro** — a from-scratch React intro that traces "SHAHZAIB." across a coordinate grid, then fades to the site (no animation library)
 
@@ -78,9 +78,9 @@ shahzaib-portfolio/
 
 ### Typography
 
-- **Display** — Handlee (handwritten accent for emphasis)
-- **Body** — Ubuntu
-- **Mono** — Ubuntu Mono (for labels, captions, code)
+- **Body & display** — Hanken Grotesk
+- **Serif accent** — Fraunces italic (for emphasized words)
+- **Mono** — IBM Plex Mono (for labels, captions, code)
 
 ### Animations
 
