@@ -45,23 +45,23 @@ export default function ExperiencePage() {
     <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-12 sm:py-16">
       {/* Header */}
       <div className="mb-14">
-        <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-4">
+        <p className="text-xs font-mono uppercase tracking-widest text-content-muted mb-4">
           {page.eyebrow}
         </p>
-        <h1 className="text-display-md text-ink-900 max-w-3xl text-balance">
+        <h1 className="text-display-md text-content max-w-3xl text-balance">
           <RichText
             segments={page.heading as Segment[]}
             emClass="font-serif italic text-accent-600"
           />
         </h1>
-        <p className="mt-5 text-lg text-ink-500 max-w-2xl">
+        <p className="mt-5 text-lg text-content-muted max-w-2xl">
           {page.subhead}
         </p>
       </div>
 
       {/* Timeline */}
       <section className="relative">
-        <div className="absolute left-4 sm:left-6 top-2 bottom-2 w-px bg-ink-900/[0.08]" aria-hidden />
+        <div className="absolute left-4 sm:left-6 top-2 bottom-2 w-px bg-content/[0.05]" aria-hidden />
 
         <div className="space-y-8 stagger-children">
           {experiences.map((exp) => (
@@ -73,8 +73,8 @@ export default function ExperiencePage() {
                     exp.current
                       ? "bg-accent-500 text-white accent-glow"
                       : exp.accent
-                      ? "bg-ink-900 text-accent-400"
-                      : "bg-cream-200 text-ink-700"
+                      ? "bg-inverse text-accent-400"
+                      : "bg-surface-strong text-content-muted"
                   }`}
                 >
                   <Briefcase size={15} />
@@ -82,10 +82,10 @@ export default function ExperiencePage() {
               </div>
 
               <article
-                className={`relative overflow-hidden rounded-3xl bg-white border ${
+                className={`relative overflow-hidden rounded-3xl bg-surface border ${
                   exp.current
                     ? "border-accent-500/30 accent-glow"
-                    : "border-ink-900/[0.06]"
+                    : "border-line/10"
                 } p-7 sm:p-9 card-hover`}
               >
                 {exp.current && (
@@ -96,19 +96,19 @@ export default function ExperiencePage() {
 
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
                   <div>
-                    <p className="text-xs font-mono uppercase tracking-widest text-ink-500">
+                    <p className="text-xs font-mono uppercase tracking-widest text-content-muted">
                       {exp.type}
                     </p>
-                    <h2 className="mt-1 text-2xl sm:text-3xl text-ink-900">
+                    <h2 className="mt-1 text-2xl sm:text-3xl text-content">
                       {exp.role}
                     </h2>
-                    <p className="mt-1 text-ink-600 font-medium">
+                    <p className="mt-1 text-content-muted font-medium">
                       {exp.company}
                     </p>
                   </div>
                   <div className="text-left sm:text-right text-sm">
-                    <p className="font-mono text-ink-700">{exp.period}</p>
-                    <p className="text-ink-500 mt-1">{exp.location}</p>
+                    <p className="font-mono text-content-muted">{exp.period}</p>
+                    <p className="text-content-muted mt-1">{exp.location}</p>
                   </div>
                 </div>
 
@@ -116,7 +116,7 @@ export default function ExperiencePage() {
                   {exp.bullets.map((b, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-3 text-ink-600 leading-relaxed"
+                      className="flex items-start gap-3 text-content-muted leading-relaxed"
                     >
                       <span className="flex-shrink-0 w-1 h-1 rounded-full bg-accent-500 mt-2.5" />
                       <span>{b}</span>
@@ -124,11 +124,11 @@ export default function ExperiencePage() {
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-2 pt-5 border-t border-ink-900/[0.05]">
+                <div className="flex flex-wrap gap-2 pt-5 border-t border-line/10">
                   {exp.stack.map((s) => (
                     <span
                       key={s}
-                      className="px-3 py-1 rounded-full bg-cream-100 border border-ink-900/[0.06] text-xs font-mono text-ink-700"
+                      className="px-3 py-1 rounded-full bg-surface border border-line/10 text-xs font-mono text-content-muted"
                     >
                       {s}
                     </span>
@@ -143,14 +143,14 @@ export default function ExperiencePage() {
       {/* Education */}
       <section className="mt-20">
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-9 h-9 rounded-2xl bg-ink-900 text-cream-100 flex items-center justify-center">
+          <div className="w-9 h-9 rounded-2xl bg-inverse text-on-inverse flex items-center justify-center">
             <GraduationCap size={16} />
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-ink-500">
+            <p className="text-xs font-mono uppercase tracking-widest text-content-muted">
               {page.education.eyebrow}
             </p>
-            <h2 className="text-3xl text-ink-900">
+            <h2 className="text-3xl text-content">
               {page.education.heading}
             </h2>
           </div>
@@ -167,15 +167,15 @@ export default function ExperiencePage() {
                   <Award size={18} />
                 </div>
                 <div className="flex-1">
-                  <p className="font-mono text-xs text-ink-500 uppercase tracking-widest">
+                  <p className="font-mono text-xs text-content-muted uppercase tracking-widest">
                     {ed.period}
                   </p>
-                  <h3 className="mt-1 text-xl text-ink-900">
+                  <h3 className="mt-1 text-xl text-content">
                     {ed.school}
                   </h3>
-                  <p className="mt-1 text-ink-600">{ed.degree}</p>
+                  <p className="mt-1 text-content-muted">{ed.degree}</p>
                   {ed.note && (
-                    <p className="mt-3 text-sm text-ink-500 leading-relaxed pt-3 border-t border-ink-900/[0.05]">
+                    <p className="mt-3 text-sm text-content-muted leading-relaxed pt-3 border-t border-line/10">
                       {ed.note}
                     </p>
                   )}
@@ -189,14 +189,14 @@ export default function ExperiencePage() {
       {/* Certifications */}
       <section className="mt-20">
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-9 h-9 rounded-2xl bg-ink-900 text-cream-100 flex items-center justify-center">
+          <div className="w-9 h-9 rounded-2xl bg-inverse text-on-inverse flex items-center justify-center">
             <BadgeCheck size={16} />
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-ink-500">
+            <p className="text-xs font-mono uppercase tracking-widest text-content-muted">
               {page.certifications.eyebrow}
             </p>
-            <h2 className="text-3xl text-ink-900">
+            <h2 className="text-3xl text-content">
               {page.certifications.heading}
             </h2>
           </div>
@@ -213,13 +213,13 @@ export default function ExperiencePage() {
                   <Award size={18} />
                 </div>
                 <div className="flex-1">
-                  <p className="font-mono text-xs text-ink-500 uppercase tracking-widest">
+                  <p className="font-mono text-xs text-content-muted uppercase tracking-widest">
                     {cert.year}
                   </p>
-                  <h3 className="mt-1 text-lg text-ink-900 leading-snug">
+                  <h3 className="mt-1 text-lg text-content leading-snug">
                     {cert.name}
                   </h3>
-                  <p className="mt-1 text-ink-600">{cert.issuer}</p>
+                  <p className="mt-1 text-content-muted">{cert.issuer}</p>
                 </div>
               </div>
             </article>

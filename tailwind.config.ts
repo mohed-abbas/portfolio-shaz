@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -46,6 +47,21 @@ const config: Config = {
           800: "rgb(var(--accent-800) / <alpha-value>)",
           900: "rgb(var(--accent-900) / <alpha-value>)",
         },
+        // Semantic roles — components use these, not the raw scales above.
+        // Values resolve to the dark theme defined in app/globals.css (:root).
+        base: "rgb(var(--base) / <alpha-value>)",
+        surface: {
+          DEFAULT: "rgb(var(--surface) / <alpha-value>)",
+          strong: "rgb(var(--surface-strong) / <alpha-value>)",
+        },
+        content: {
+          DEFAULT: "rgb(var(--content) / <alpha-value>)",
+          muted: "rgb(var(--content-muted) / <alpha-value>)",
+          faint: "rgb(var(--content-faint) / <alpha-value>)",
+        },
+        line: "rgb(var(--line) / <alpha-value>)",
+        inverse: "rgb(var(--inverse) / <alpha-value>)",
+        "on-inverse": "rgb(var(--on-inverse) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-ubuntu)", "system-ui", "sans-serif"],

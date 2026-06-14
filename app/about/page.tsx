@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const icons = { Code, Database, Cloud, Brain, Building2 };
 
 const accentEm = "font-serif italic text-accent-600";
-const boldEm = "text-ink-900 font-medium";
+const boldEm = "text-content font-medium";
 
 export default function AboutPage() {
   return (
@@ -23,13 +23,13 @@ export default function AboutPage() {
       {/* Header */}
       <div className="mb-16 flex flex-col-reverse sm:flex-row sm:items-center gap-8 sm:gap-10">
         <div className="flex-1 min-w-0 max-w-3xl">
-          <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-4">
+          <p className="text-xs font-mono uppercase tracking-widest text-content-muted mb-4">
             {about.header.eyebrow}
           </p>
-          <h1 className="text-display-md text-ink-900 text-balance">
+          <h1 className="text-display-md text-content text-balance">
             <RichText segments={about.header.headingSegments as Segment[]} emClass={accentEm} />
           </h1>
-          <p className="mt-5 text-lg text-ink-500 max-w-2xl">
+          <p className="mt-5 text-lg text-content-muted max-w-2xl">
             {about.header.subhead}
           </p>
         </div>
@@ -41,20 +41,20 @@ export default function AboutPage() {
             width={320}
             height={320}
             priority
-            className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full object-cover ring-4 ring-cream-100 shadow-[0_20px_50px_-25px_rgba(11,11,10,0.35)]"
+            className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full object-cover ring-4 ring-line/15 shadow-[var(--shadow-elev)]"
           />
         </div>
       </div>
 
       {/* Intro */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-16 stagger-children">
-        <div className="lg:col-span-7 relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] p-8 sm:p-10">
+        <div className="lg:col-span-7 relative overflow-hidden rounded-3xl bg-surface border border-line/10 p-8 sm:p-10">
           <div className="absolute inset-0 grid-pattern opacity-50 pointer-events-none" />
           <div className="relative">
-            <p className="text-3xl sm:text-4xl text-ink-900 leading-snug text-balance">
+            <p className="text-3xl sm:text-4xl text-content leading-snug text-balance">
               <RichText segments={about.intro.leadSegments as Segment[]} emClass={accentEm} />
             </p>
-            <div className="mt-6 space-y-4 text-ink-600 leading-relaxed">
+            <div className="mt-6 space-y-4 text-content-muted leading-relaxed">
               {about.intro.body.map((para, i) => (
                 <p key={i}>
                   {typeof para === "string" ? (
@@ -69,10 +69,10 @@ export default function AboutPage() {
         </div>
 
         <aside className="lg:col-span-5 space-y-5">
-          <div className="relative overflow-hidden rounded-3xl bg-ink-900 text-cream-100 p-8">
+          <div className="relative overflow-hidden rounded-3xl bg-inverse text-on-inverse p-8">
             <div className="absolute -top-12 -right-12 w-48 h-48 bg-accent-500/30 rounded-full blur-3xl" />
             <div className="relative">
-              <p className="font-mono text-xs uppercase tracking-widest text-cream-100/40">
+              <p className="font-mono text-xs uppercase tracking-widest text-on-inverse/40">
                 {about.quickFacts.eyebrow}
               </p>
               <ul className="mt-5 space-y-3 text-sm">
@@ -81,11 +81,11 @@ export default function AboutPage() {
                     key={fact.label}
                     className={
                       i < about.quickFacts.items.length - 1
-                        ? "flex justify-between gap-4 pb-3 border-b border-cream-100/10"
+                        ? "flex justify-between gap-4 pb-3 border-b border-line/10"
                         : "flex justify-between gap-4"
                     }
                   >
-                    <span className="text-cream-100/60">{fact.label}</span>
+                    <span className="text-on-inverse/60">{fact.label}</span>
                     <span>{fact.value}</span>
                   </li>
                 ))}
@@ -116,17 +116,17 @@ export default function AboutPage() {
           <a
             href={profile.resumeUrl}
             download
-            className="group flex items-center justify-between gap-4 rounded-3xl bg-white border border-ink-900/[0.06] p-6 card-hover"
+            className="group flex items-center justify-between gap-4 rounded-3xl bg-surface border border-line/10 p-6 card-hover"
           >
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-ink-500 mb-1">
+              <p className="font-mono text-xs uppercase tracking-widest text-content-muted mb-1">
                 {about.ctaResume.eyebrow}
               </p>
-              <p className="text-base text-ink-900 font-medium">
+              <p className="text-base text-content font-medium">
                 {about.ctaResume.line}
               </p>
             </div>
-            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-ink-900 text-cream-100 group-hover:bg-accent-500 transition-colors flex-shrink-0">
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-inverse text-on-inverse group-hover:bg-accent-500 transition-colors flex-shrink-0">
               <Download size={18} />
             </span>
           </a>
@@ -136,10 +136,10 @@ export default function AboutPage() {
       {/* Principles */}
       <section className="mb-16">
         <div className="mb-8">
-          <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-2">
+          <p className="text-xs font-mono uppercase tracking-widest text-content-muted mb-2">
             {about.principlesSection.eyebrow}
           </p>
-          <h2 className="text-3xl sm:text-4xl text-ink-900">
+          <h2 className="text-3xl sm:text-4xl text-content">
             <RichText segments={about.principlesSection.headingSegments as Segment[]} emClass={accentEm} />
           </h2>
         </div>
@@ -153,8 +153,8 @@ export default function AboutPage() {
               <p className="font-serif text-5xl text-accent-500/30 italic">
                 {p.n}
               </p>
-              <h3 className="mt-4 font-medium text-ink-900">{p.title}</h3>
-              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
+              <h3 className="mt-4 font-medium text-content">{p.title}</h3>
+              <p className="mt-2 text-sm text-content-muted leading-relaxed">
                 {p.body}
               </p>
             </div>
@@ -165,10 +165,10 @@ export default function AboutPage() {
       {/* Skills */}
       <section>
         <div className="mb-8">
-          <p className="text-xs font-mono uppercase tracking-widest text-ink-500 mb-2">
+          <p className="text-xs font-mono uppercase tracking-widest text-content-muted mb-2">
             {about.skillsSection.eyebrow}
           </p>
-          <h2 className="text-3xl sm:text-4xl text-ink-900">
+          <h2 className="text-3xl sm:text-4xl text-content">
             <RichText segments={about.skillsSection.headingSegments as Segment[]} emClass={accentEm} />
           </h2>
         </div>
@@ -185,13 +185,13 @@ export default function AboutPage() {
                   <div className="w-10 h-10 rounded-2xl bg-accent-500/10 text-accent-600 flex items-center justify-center">
                     <Icon size={18} />
                   </div>
-                  <h3 className="font-medium text-ink-900">{group.title}</h3>
+                  <h3 className="font-medium text-content">{group.title}</h3>
                 </div>
                 <ul className="space-y-2">
                   {group.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-2 text-sm text-ink-600"
+                      className="flex items-center gap-2 text-sm text-content-muted"
                     >
                       <span className="w-1 h-1 rounded-full bg-accent-500/60" />
                       {item}

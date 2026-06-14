@@ -9,18 +9,18 @@ export default function AICard() {
   return (
     <div className={`${cardClass} p-7 col-span-full sm:col-span-1 lg:col-span-5`}>
       <div className="flex items-start gap-4 mb-5">
-        <div className="w-10 h-10 rounded-2xl bg-ink-900/[0.04] flex items-center justify-center text-ink-900">
+        <div className="w-10 h-10 rounded-2xl bg-content/[0.05] flex items-center justify-center text-content">
           <Brain size={18} />
         </div>
         <div>
-          <p className="text-xs uppercase tracking-widest text-ink-500 font-mono">
+          <p className="text-xs uppercase tracking-widest text-content-muted font-mono">
             {eyebrow}
           </p>
-          <p className="font-medium text-ink-900">{subtitle}</p>
+          <p className="font-medium text-content">{subtitle}</p>
         </div>
       </div>
 
-      <p className="text-2xl text-ink-900 leading-snug">
+      <p className="text-2xl text-content leading-snug">
         {copy}
       </p>
 
@@ -28,7 +28,7 @@ export default function AICard() {
         {providers.map((p) => (
           <div
             key={p.name}
-            className="aspect-square rounded-2xl border border-ink-900/[0.06] bg-cream-50 flex flex-col items-center justify-center gap-2 hover:border-accent-500/30 hover:bg-accent-500/5 transition-all"
+            className="aspect-square rounded-2xl border border-line/10 bg-surface flex flex-col items-center justify-center gap-2 hover:border-accent-500/30 hover:bg-accent-500/5 transition-all"
           >
             <Image
               src={p.logo}
@@ -37,7 +37,7 @@ export default function AICard() {
               height={28}
               className="w-7 h-7 object-contain"
             />
-            <span className="text-[11px] font-mono text-ink-600">{p.name}</span>
+            <span className="text-[11px] font-mono text-content-muted">{p.name}</span>
           </div>
         ))}
       </div>

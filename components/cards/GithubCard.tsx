@@ -15,19 +15,19 @@ export default function GithubCard() {
     >
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-ink-900 text-cream-100 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-2xl bg-inverse text-on-inverse flex items-center justify-center">
             <Github size={18} />
           </div>
           <div>
-            <p className="text-xs uppercase tracking-widest text-ink-500 font-mono">
+            <p className="text-xs uppercase tracking-widest text-content-muted font-mono">
               GitHub
             </p>
-            <p className="font-medium text-ink-900">{profile.githubHandle}</p>
+            <p className="font-medium text-content">{profile.githubHandle}</p>
           </div>
         </div>
         <ArrowUpRight
           size={18}
-          className="text-ink-500 group-hover:text-accent-500 group-hover:rotate-12 transition-all"
+          className="text-content-muted group-hover:text-accent-500 group-hover:rotate-12 transition-all"
         />
       </div>
 
@@ -44,7 +44,7 @@ export default function GithubCard() {
               ? "bg-accent-200"
               : level === 1
               ? "bg-accent-100"
-              : "bg-ink-900/[0.04]";
+              : "bg-content/[0.05]";
           return (
             <span
               key={i}
@@ -54,13 +54,13 @@ export default function GithubCard() {
         })}
       </div>
 
-      <div className="mt-6 grid grid-cols-3 gap-3 pt-5 border-t border-ink-900/[0.06]">
+      <div className="mt-6 grid grid-cols-3 gap-3 pt-5 border-t border-line/10">
         {stats.map((stat) => (
           <div key={stat.label}>
-            <p className={stat.accent ? "font-serif text-3xl text-accent-600" : "text-3xl text-ink-900"}>
+            <p className={stat.accent ? "font-serif text-3xl text-accent-600" : "text-3xl text-content"}>
               {stat.value}
             </p>
-            <p className="text-xs text-ink-500 font-mono mt-1">{stat.label}</p>
+            <p className="text-xs text-content-muted font-mono mt-1">{stat.label}</p>
           </div>
         ))}
       </div>

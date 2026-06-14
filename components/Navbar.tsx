@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 import links from "@/data/navigation.json";
 import profile from "@/data/profile.json";
 
@@ -13,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-cream-100/70 border-b border-ink-900/[0.06]">
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-base/70 border-b border-line/10">
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
         <Link
           href="/"
@@ -27,11 +28,11 @@ export default function Navbar() {
               width={72}
               height={72}
               priority
-              className="w-9 h-9 rounded-full object-cover ring-1 ring-ink-900/10"
+              className="w-9 h-9 rounded-full object-cover ring-1 ring-line/15"
             />
-            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-accent-500 ring-2 ring-cream-100 animate-shimmer" />
+            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-accent-500 ring-2 ring-base animate-shimmer" />
           </span>
-          <span className="font-medium text-ink-900 tracking-tight">
+          <span className="font-medium text-content tracking-tight">
             Shaz<span className="text-accent-500">.</span>
           </span>
         </Link>
@@ -46,12 +47,12 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative px-4 py-2 text-sm rounded-full transition-colors ${
                     active
-                      ? "text-ink-900"
-                      : "text-ink-500 hover:text-ink-900"
+                      ? "text-content"
+                      : "text-content-muted hover:text-content"
                   }`}
                 >
                   {active && (
-                    <span className="absolute inset-0 rounded-full bg-ink-900/[0.05]" />
+                    <span className="absolute inset-0 rounded-full bg-content/[0.05]" />
                   )}
                   <span className="relative">{link.label}</span>
                 </Link>
@@ -61,27 +62,31 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <a
             href={`mailto:${profile.email}`}
-            className="text-sm font-medium px-4 py-2 rounded-full bg-ink-900 text-cream-100 hover:bg-ink-700 transition-colors"
+            className="text-sm font-medium px-4 py-2 rounded-full bg-inverse text-on-inverse hover:bg-inverse/90 transition-colors"
           >
             Get in touch
           </a>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 -mr-2 text-ink-900"
-          onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile controls */}
+        <div className="md:hidden flex items-center gap-1">
+          <ThemeToggle />
+          <button
+            className="p-2 -mr-2 text-content"
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-ink-900/[0.06] bg-cream-100">
+        <div className="md:hidden border-t border-line/10 bg-surface">
           <ul className="px-5 py-4 space-y-1">
             {links.map((link) => {
               const active = pathname === link.href;
@@ -92,8 +97,8 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={`block px-4 py-3 rounded-xl text-sm ${
                       active
-                        ? "bg-ink-900/[0.05] text-ink-900"
-                        : "text-ink-600"
+                        ? "bg-content/[0.05] text-content"
+                        : "text-content-muted"
                     }`}
                   >
                     {link.label}
@@ -104,7 +109,7 @@ export default function Navbar() {
             <li>
               <a
                 href={`mailto:${profile.email}`}
-                className="block mt-2 px-4 py-3 rounded-xl bg-ink-900 text-cream-100 text-sm text-center"
+                className="block mt-2 px-4 py-3 rounded-xl bg-inverse text-on-inverse text-sm text-center"
               >
                 Get in touch
               </a>

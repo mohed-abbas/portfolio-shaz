@@ -82,7 +82,7 @@ export default function ProjectsBarrel({
                 <span
                   key={i}
                   className={`block w-1 rounded-full transition-all ${
-                    active ? "h-8 bg-accent-500" : "h-3 bg-ink-300"
+                    active ? "h-8 bg-accent-500" : "h-3 bg-content-faint"
                   }`}
                 />
               );
@@ -135,7 +135,7 @@ function ProjectCard({
   total: number;
 }) {
   return (
-    <article className="group relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] h-full shadow-[0_24px_50px_-28px_rgba(11,11,10,0.25)]">
+    <article className="group relative overflow-hidden rounded-3xl bg-surface border border-line/10 h-full shadow-[var(--shadow-elev)]">
       <div className="grid grid-cols-1 lg:grid-cols-12 h-full">
         <div
           className={`relative lg:col-span-4 bg-gradient-to-br ${p.gradient} text-white p-5 sm:p-6 flex flex-col justify-between overflow-hidden`}
@@ -163,18 +163,18 @@ function ProjectCard({
           <div>
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="text-[10px] font-mono uppercase tracking-widest text-ink-500">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-content-muted">
                   {p.role}
                 </p>
-                <h2 className="mt-0.5 text-lg sm:text-xl text-ink-900 text-balance leading-snug">
+                <h2 className="mt-0.5 text-lg sm:text-xl text-content text-balance leading-snug">
                   {p.subtitle}
                 </h2>
               </div>
-              <span className="hidden sm:inline-flex flex-shrink-0 items-center justify-center w-8 h-8 rounded-full bg-ink-900 text-cream-100 group-hover:bg-accent-500 group-hover:rotate-45 transition-all">
+              <span className="hidden sm:inline-flex flex-shrink-0 items-center justify-center w-8 h-8 rounded-full bg-inverse text-on-inverse group-hover:bg-accent-500 group-hover:rotate-45 transition-all">
                 <ArrowUpRight size={13} />
               </span>
             </div>
-            <p className="mt-2 text-[13px] text-ink-600 leading-relaxed text-balance line-clamp-2">
+            <p className="mt-2 text-[13px] text-content-muted leading-relaxed text-balance line-clamp-2">
               {p.description}
             </p>
           </div>
@@ -183,7 +183,7 @@ function ProjectCard({
             {p.tags.map((t) => (
               <span
                 key={t}
-                className="px-2 py-0.5 rounded-full bg-cream-200 text-[10px] font-mono text-ink-700"
+                className="px-2 py-0.5 rounded-full bg-surface-strong text-[10px] font-mono text-content-muted"
               >
                 {t}
               </span>

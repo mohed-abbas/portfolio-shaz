@@ -84,7 +84,7 @@ export default function GetInTouchModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink-900/40 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
       onClick={() => setOpen(false)}
     >
       <div
@@ -92,23 +92,23 @@ export default function GetInTouchModal() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="get-in-touch-title"
-        className="relative w-full max-w-md rounded-3xl bg-white border border-ink-900/[0.06] p-7 sm:p-8 shadow-2xl"
+        className="relative w-full max-w-md rounded-3xl bg-surface border border-line/10 p-7 sm:p-8 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           aria-label="Close"
           onClick={() => setOpen(false)}
-          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-cream-200 hover:bg-cream-300 flex items-center justify-center text-ink-700 transition-colors"
+          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-surface-strong hover:bg-content/[0.05] flex items-center justify-center text-content-muted transition-colors"
         >
           <X size={16} />
         </button>
 
-        <p className="font-mono text-xs uppercase tracking-widest text-ink-500">
+        <p className="font-mono text-xs uppercase tracking-widest text-content-muted">
           {contact.eyebrow}
         </p>
         <h2
           id="get-in-touch-title"
-          className="mt-2 text-2xl sm:text-3xl text-ink-900 leading-tight"
+          className="mt-2 text-2xl sm:text-3xl text-content leading-tight"
         >
           {contact.title.before}
           <span className="font-serif italic text-accent-600">
@@ -116,7 +116,7 @@ export default function GetInTouchModal() {
           </span>
           {contact.title.after}
         </h2>
-        <p className="mt-3 text-sm text-ink-500 leading-relaxed">
+        <p className="mt-3 text-sm text-content-muted leading-relaxed">
           {contact.blurb}
         </p>
 
@@ -129,16 +129,16 @@ export default function GetInTouchModal() {
                 href={href}
                 target={href.startsWith("mailto:") ? undefined : "_blank"}
                 rel="noreferrer"
-                className="group flex items-center gap-3 px-4 py-3 rounded-2xl border border-ink-900/[0.08] hover:border-ink-900/30 hover:bg-cream-100 transition-colors"
+                className="group flex items-center gap-3 px-4 py-3 rounded-2xl border border-line/10 hover:border-line/25 hover:bg-surface-strong transition-colors"
               >
-                <Icon size={18} className="text-ink-700 flex-shrink-0" />
-                <span className="text-sm font-medium text-ink-900">{label}</span>
-                <span className="ml-auto text-xs font-mono text-ink-500 truncate">
+                <Icon size={18} className="text-content-muted flex-shrink-0" />
+                <span className="text-sm font-medium text-content">{label}</span>
+                <span className="ml-auto text-xs font-mono text-content-muted truncate">
                   {handle}
                 </span>
                 <ArrowUpRight
                   size={14}
-                  className="text-ink-500 group-hover:text-accent-600 group-hover:rotate-45 transition-all flex-shrink-0"
+                  className="text-content-muted group-hover:text-accent-600 group-hover:rotate-45 transition-all flex-shrink-0"
                 />
               </a>
             </li>

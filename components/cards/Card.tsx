@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export const cardClass =
-  "relative overflow-hidden rounded-3xl bg-white border border-ink-900/[0.06] card-hover";
+  "relative overflow-hidden rounded-3xl bg-surface border border-line/10 card-hover";
 
 interface CardProps {
   children: ReactNode;

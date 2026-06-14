@@ -67,9 +67,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* Apply the saved/system theme before paint to avoid a flash. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d);}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body
-        className={`${ubuntu.variable} ${ubuntuMono.variable} ${handlee.variable} font-sans bg-cream-100 text-ink-900 antialiased min-h-screen flex flex-col`}
+        className={`${ubuntu.variable} ${ubuntuMono.variable} ${handlee.variable} font-sans bg-base text-content antialiased min-h-screen flex flex-col`}
       >
         <div className="fixed inset-0 -z-10 grain-overlay opacity-100 pointer-events-none" />
         <Navbar />

@@ -8,21 +8,21 @@ const icons = { Github, Linkedin, Mail };
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink-900/[0.06] mt-20">
+    <footer className="border-t border-line/10 mt-20">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
-            <p className="text-4xl text-ink-900 leading-tight">
+            <p className="text-4xl text-content leading-tight">
               Let&apos;s build something <br />
               <span className="font-serif italic text-accent-500">that stays up.</span>
             </p>
-            <p className="mt-4 text-ink-500 max-w-md">
+            <p className="mt-4 text-content-muted max-w-md">
               Open to senior full-stack roles and long-term remote
               contracts. Replies within 24 hours, in your timezone.
             </p>
             <a
               href={`mailto:${profile.email}?subject=Project%20inquiry`}
-              className="mt-6 inline-flex items-center gap-2 text-ink-900 font-medium border-b-2 border-ink-900 pb-1 hover:gap-3 transition-all"
+              className="mt-6 inline-flex items-center gap-2 text-content font-medium border-b-2 border-line/30 pb-1 hover:gap-3 transition-all"
             >
               {profile.email}
               <ArrowUpRight size={16} />
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3 md:col-start-8">
-            <p className="text-xs uppercase tracking-widest text-ink-500 mb-4">
+            <p className="text-xs uppercase tracking-widest text-content-muted mb-4">
               Navigate
             </p>
             <ul className="space-y-2">
@@ -38,7 +38,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-ink-700 hover:text-accent-500 transition-colors"
+                    className="text-content-muted hover:text-accent-500 transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <p className="text-xs uppercase tracking-widest text-ink-500 mb-4">
+            <p className="text-xs uppercase tracking-widest text-content-muted mb-4">
               Elsewhere
             </p>
             <ul className="space-y-2">
@@ -61,7 +61,7 @@ export default function Footer() {
                       href={item.href}
                       target={external ? "_blank" : undefined}
                       rel={external ? "noreferrer" : undefined}
-                      className="inline-flex items-center gap-2 text-ink-700 hover:text-accent-500 transition-colors"
+                      className="inline-flex items-center gap-2 text-content-muted hover:text-accent-500 transition-colors"
                     >
                       <Icon size={14} />
                       {item.label}
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-ink-900/[0.06] text-sm text-ink-500">
+        <div className="mt-16 pt-8 border-t border-line/10 text-sm text-content-muted">
           <p>© {new Date().getFullYear()} {profile.fullName}. All rights reserved.</p>
         </div>
       </div>
